@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
+import AlertButton from "../components/button/button"
 
 const links = [
   {
@@ -47,24 +48,20 @@ const samplePageLinks = [
 ]
 
 const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
+  { text: "Aviso legal", url: "https://gatsby.dev/discord" },
   {
-    text: "Documentation",
+    text: "Accesibilidad",
     url: "https://gatsbyjs.com/docs/",
   },
   {
-    text: "Starters",
+    text: "Política de cookies",
     url: "https://gatsbyjs.com/starters/",
   },
   {
-    text: "Showcase",
+    text: "Política de privacidad",
     url: "https://gatsbyjs.com/showcase/",
   },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
+  
 ]
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
@@ -73,7 +70,7 @@ const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>
       <StaticImage
-        src="../images/example.png"
+        src="../images/patrimonio.jpg"
         loading="eager"
         width={64}
         quality={95}
@@ -82,7 +79,7 @@ const IndexPage = () => (
         style={{ marginBottom: `var(--space-3)` }}
       />
       <h1>
-        Welcome to <b>Gatsby!</b>
+        GENERADOR QR
       </h1>
       <p className={styles.intro}>
         <b>Example pages:</b>{" "}
@@ -93,10 +90,16 @@ const IndexPage = () => (
           </React.Fragment>
         ))}
         <br />
-        Edit <code>src/pages/index.js</code> to update this page.
+        
       </p>
     </div>
-    <ul className={styles.list}>
+    <div className="botones">
+    <AlertButton message='inicio sesion'> Acceso empleados </AlertButton>
+
+    <br></br>
+    <AlertButton message='patrimonio nacional'> Información institucional </AlertButton>
+   </div>
+    {/* <ul className={styles.list}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
           <a
@@ -114,7 +117,7 @@ const IndexPage = () => (
         <a href={`${link.url}${utmParameters}`}>{link.text}</a>
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
-    ))}
+    ))} */}
   </Layout>
 )
 
