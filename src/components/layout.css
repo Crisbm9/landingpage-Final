@@ -226,6 +226,8 @@ pre tt:after {
 
 footer{
   background-color: black;
+  color: #fff4db;
+  
 }
 
 .botones{
@@ -236,4 +238,7 @@ footer{
 button{
   margin: 3em;
   padding: 3em;
+}
+.a{
+  margin: 1em;
 }

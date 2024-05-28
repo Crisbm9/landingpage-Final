@@ -72,7 +72,7 @@ const IndexPage = () => (
       <StaticImage
         src="../images/patrimonio.jpg"
         loading="eager"
-        width={64}
+        width={190}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -99,7 +99,7 @@ const IndexPage = () => (
     <br></br>
     <AlertButton message='patrimonio nacional'> Información institucional </AlertButton>
    </div>
-    {/* <ul className={styles.list}>
+    {/* { <ul className={styles.list}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
           <a
@@ -117,7 +117,7 @@ const IndexPage = () => (
         <a href={`${link.url}${utmParameters}`}>{link.text}</a>
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
-    ))} */}
+    ))} } */}
   </Layout>
 )
 

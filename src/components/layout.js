@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import { StaticImage } from "gatsby-plugin-image"
+import Footer from "./footer"
 
 import "./layout.css"
 
@@ -36,27 +37,9 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; 
-          {` `}
-          <a href="https://www.patrimonionacional.es/">Patrimonio Nacional</a>
-
-          <StaticImage
-        src="../images/patrimonio.jpg"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-        </footer>
+        
       </div>
+      <Footer></Footer>
     </>
   )
 }
