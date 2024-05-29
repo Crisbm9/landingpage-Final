@@ -5,7 +5,7 @@ function AlertButton({message,children}){
     <button onClick={function() {
       alert(message)
     }}>
-      {children}
+      <b>{children}</b>
     </button>
   )
 }

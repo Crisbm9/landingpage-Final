@@ -42,6 +42,10 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  background-image: url('../images/inicio-ordena.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 a {
   background-color: transparent;
@@ -234,11 +238,30 @@ footer{
   background-image: url('../images/Fuente.jpg');
   text-align: center;
   padding: 10em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  
 }
 button{
-  margin: 3em;
-  padding: 3em;
+  margin: 2em;
+  padding: 2em;
+  border-radius: 10%;
+  background-color: antiquewhite;
+  border: 5px solid #69572B;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+button:hover{
+  background-color: #69572B;
+  color: white;
+}
+
 .a{
   margin: 1em;
+}
+
+.layoute{
+  
+  background-color: antiquewhite;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
 }

@@ -7,6 +7,8 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import AlertButton from "../components/button/button"
 
+
+
 const links = [
   {
     text: "Tutorial",
@@ -68,11 +70,13 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
   <Layout>
+    <div className="layoute">
+    
     <div className={styles.textCenter}>
       <StaticImage
-        src="../images/patrimonio.jpg"
+        src="../images/Logo_de_Patrimonio_Nacional.svg.png"
         loading="eager"
-        width={190}
+        width={250}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -81,7 +85,7 @@ const IndexPage = () => (
       <h1>
         GENERADOR QR
       </h1>
-      <p className={styles.intro}>
+      {/* <p className={styles.intro}>
         <b>Example pages:</b>{" "}
         {samplePageLinks.map((link, i) => (
           <React.Fragment key={link.url}>
@@ -91,7 +95,7 @@ const IndexPage = () => (
         ))}
         <br />
         
-      </p>
+      </p> */}
     </div>
     <div className="botones">
     <AlertButton message='inicio sesion'> Acceso empleados </AlertButton>
@@ -99,33 +103,13 @@ const IndexPage = () => (
     <br></br>
     <AlertButton message='patrimonio nacional'> Información institucional </AlertButton>
    </div>
-    {/* { <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))} } */}
+    
+    </div>
+    
   </Layout>
 )
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
+
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage

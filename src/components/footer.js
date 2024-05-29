@@ -41,30 +41,3 @@ const Footer = () => {
 
 export default Footer;
 
-
-// style={{
-//   // marginTop: `var(--space-5)`,
-//   // fontSize: `var(--font-sm)`,
-  
-// margin: `0 auto`,
-// padding: `var(--space-4) var(--size-gutter)`,
-// display: `flex`,
-// alignItems: `center`,
-// justifyContent: `space-between`,
-
-
-// }}
-// >
-// © {new Date().getFullYear()} &middot; 
-// {` `}
-// <a href="https://www.patrimonionacional.es/">Patrimonio Nacional</a>
-
-// <StaticImage
-// src="../images/patrimonio.jpg"
-// loading="eager"
-// width={64}
-// quality={95}
-// formats={["auto", "webp", "avif"]}
-// alt=""
-// style={{ marginBottom: `var(--space-3)` }}
-// />
