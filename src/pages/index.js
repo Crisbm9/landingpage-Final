@@ -6,6 +6,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import AlertButton from "../components/button/button"
+import AlertButton2 from "../components/button/buttoninfo"
+
+import Burbujas from "../components/burbujas/burbujas"
 
 
 
@@ -70,7 +73,9 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
   <Layout>
+    
     <div className="layoute">
+    
     
     <div className={styles.textCenter}>
       <StaticImage
@@ -85,27 +90,22 @@ const IndexPage = () => (
       <h1>
         GENERADOR QR
       </h1>
-      {/* <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        
-      </p> */}
+      
     </div>
     <div className="botones">
-    <AlertButton message='inicio sesion'> Acceso empleados </AlertButton>
 
+    <div className="alertbutton">
+    <AlertButton></AlertButton>
+    </div>
     <br></br>
-    <AlertButton message='patrimonio nacional'> Información institucional </AlertButton>
+    <div className="alertbutton">
+    <AlertButton2></AlertButton2>
+    </div>
+
    </div>
     
     </div>
-    
+   
   </Layout>
 )
 

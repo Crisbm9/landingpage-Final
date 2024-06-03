@@ -44,9 +44,10 @@ body {
   word-wrap: break-word;
   background-image: url('../images/inicio-ordena.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
 
 }
+
 a {
   background-color: transparent;
   color: var(--color-primary);
@@ -61,6 +62,7 @@ a:hover {
   outline-width: 0;
   text-decoration: none;
 }
+
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
@@ -98,7 +100,7 @@ samp {
 }
 hr {
   box-sizing: content-box;
-  overflow: visible;
+  overflow: hidden;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -106,7 +108,7 @@ hr {
   margin-bottom: calc(var(--space-4) - 1px);
   background: hsla(0, 0%, 0%, 0.2);
   border: none;
-  height: 1px;
+  height: 2px;
 }
 * {
   box-sizing: inherit;
@@ -226,42 +228,73 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
-
-
+/* ------------------------------------------------------------------------ */
 footer{
-  background-color: black;
+  background-color: rgba(10, 10, 10, 0.6);
   color: #fff4db;
-  
+}
+.footerfoto{
+  text-align: right;
 }
 
 .botones{
   background-image: url('../images/Fuente.jpg');
   text-align: center;
-  padding: 10em;
+  padding: 1em;
+  height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   align-items: center;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  gap: 2em;
+
   
 }
-button{
-  margin: 2em;
-  padding: 2em;
-  border-radius: 10%;
-  background-color: antiquewhite;
-  border: 5px solid #69572B;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-button:hover{
+.button{
+  margin: 0; 
+  padding: .5em; 
+  border-radius: 8px; 
+  background-color:antiquewhite; 
+  color: #43381b; 
+  border: 3px solid #43381b;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
+  width: 380px; 
+  height: 100px; 
+  text-decoration: none;
+
+} 
+.button:hover{
   background-color: #69572B;
   color: white;
 }
 
 .a{
-  margin: 1em;
+  margin: 2em;
+  color: #A59A80;
+}
+.ai{
+  color: #A59A80;
 }
 
-.layoute{
-  
+.layoute{ 
   background-color: antiquewhite;
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  text-align: center;
 }
+
+@media  (max-width: 400px) {
+  footer{
+    margin: auto;
+    padding: 1em;
+  }
+ .botones{
+  background-image: url('../images/Fuentepequeña.jpg');
+ }
+} 
+/* styles.textCenter */
+

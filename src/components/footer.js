@@ -14,7 +14,7 @@ const Footer = () => {
   >
     © {new Date().getFullYear()} &middot; 
     {` `}
-    <a href="https://www.patrimonionacional.es/">Patrimonio Nacional</a>
+    <a className='ai' href="https://www.patrimonionacional.es/">Patrimonio Nacional</a>
 
    
 
@@ -23,18 +23,27 @@ const Footer = () => {
 <a className='a' href="#">Política de Privacidad</a>
 <a className='a' href="#">Política de cookies</a>
 
-<br></br>
 
+<div className='footerfoto'>
 <StaticImage
-  src="../images/patrimonio.jpg"
+  src="../images/Logo_de_Patrimonio_Nacional.svg"
   loading="eager"
-  width={64}
+  width={150}
   quality={95}
   formats={["auto", "webp", "avif"]}
   alt=""
   style={{ marginBottom: `var(--space-3)` }}
 />
-
+<StaticImage
+  src="../images/logo-tandem.png"
+  loading="eager"
+  width={120}
+  quality={95}
+  formats={["auto", "webp", "avif"]}
+  alt=""
+  style={{ marginBottom: `var(--space-3)` }}
+/>
+</div>
   </footer>
   );
 };
