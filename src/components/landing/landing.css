@@ -1,0 +1,53 @@
+
+.layoute{ 
+  background-color: antiquewhite;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  text-align: center;
+}
+
+.botones{
+  background-image: url('../../images/Fuente.jpg');
+  text-align: center;
+  padding: 1em;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  gap: 2em;
+
+  
+}
+
+.cajatitulo{
+  text-align: center;
+}
+
+@media  (max-width: 400px) {
+ .botones{
+  background-image: url('../../images/Fuentepequeña.jpg');
+ }
+} 
+
+.button{
+  margin: 0; 
+  padding: .5em; 
+  border-radius: 8px; 
+  background-color:antiquewhite; 
+  color: #43381b; 
+  border: 3px solid #43381b;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
+  width: 380px; 
+  height: 100px; 
+  text-decoration: none;
+
+} 
+.button:hover{
+  background-color: #69572B;
+  color: white;
+}

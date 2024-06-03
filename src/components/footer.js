@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticImage } from "gatsby-plugin-image"
-import "./layout.css"
+import "./footer.css"
 
 
 
@@ -14,9 +14,9 @@ const Footer = () => {
   >
     © {new Date().getFullYear()} &middot; 
     {` `}
-    <a className='ai' href="https://www.patrimonionacional.es/">Patrimonio Nacional</a>
+    Patrimonio Nacional
 
-   
+
 
 <a className='a' href="#">Aviso Legal</a>
 <a className='a' href="#">Accesibilidad</a>

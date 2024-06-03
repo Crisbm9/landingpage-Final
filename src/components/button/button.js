@@ -1,4 +1,5 @@
 import * as React from 'react'
+import "./button.css"
 
 function AlertButton(){
   return(
@@ -7,13 +8,3 @@ function AlertButton(){
 }
 export default AlertButton
 
-// function AlertButton({message,children}){
-//   return(
-//     <button onClick={function() {
-//       alert(message)
-//     }}>
-//       <b>{children}</b>
-//     </button>
-//   )
-// }
-// export default AlertButton

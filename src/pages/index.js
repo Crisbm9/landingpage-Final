@@ -9,6 +9,7 @@ import AlertButton from "../components/button/button"
 import AlertButton2 from "../components/button/buttoninfo"
 
 import Burbujas from "../components/burbujas/burbujas"
+import Landing from "../components/landing/landing"
 
 
 
@@ -73,39 +74,8 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
   <Layout>
-    
-    <div className="layoute">
-    
-    
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/Logo_de_Patrimonio_Nacional.svg.png"
-        loading="eager"
-        width={250}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        GENERADOR QR
-      </h1>
-      
-    </div>
-    <div className="botones">
 
-    <div className="alertbutton">
-    <AlertButton></AlertButton>
-    </div>
-    <br></br>
-    <div className="alertbutton">
-    <AlertButton2></AlertButton2>
-    </div>
-
-   </div>
-    
-    </div>
-   
+   <Landing></Landing>
   </Layout>
 )
 
