@@ -25,19 +25,11 @@ const Footer = () => {
 
 
 <div className='footerfoto'>
-<StaticImage
-  src="../images/Logo_de_Patrimonio_Nacional.svg"
-  loading="eager"
-  width={150}
-  quality={95}
-  formats={["auto", "webp", "avif"]}
-  alt=""
-  style={{ marginBottom: `var(--space-3)` }}
-/>
+
 <StaticImage
   src="../images/logo-tandem.png"
   loading="eager"
-  width={120}
+  width={75}
   quality={95}
   formats={["auto", "webp", "avif"]}
   alt=""

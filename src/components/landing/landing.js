@@ -1,7 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image"
-import AlertButton from "../button/button";
-import AlertButton2 from "../button/buttoninfo";
+import TandemButton from "../button/tandembutton";
 import "./landing.css"
 
 
@@ -10,7 +9,7 @@ function Landing(){
     <div className="layoute">
     
     <div className="cajatitulo">
-      <StaticImage
+      {/* <StaticImage
         src="../../images/Logo_de_Patrimonio_Nacional.svg.png"
         loading="eager"
         width={250}
@@ -18,7 +17,7 @@ function Landing(){
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
-      />
+      /> */}
       <h1>
         GENERADOR QR
       </h1>
@@ -26,13 +25,13 @@ function Landing(){
     </div>
     <div className="botones">
 
-    <div className="alertbutton">
-    <AlertButton></AlertButton>
-    </div>
+    
+    <TandemButton enlace="inicio" >Acceso empleados</TandemButton>
+    
     <br></br>
-    <div className="alertbutton">
-    <AlertButton2></AlertButton2>
-    </div>
+    
+    <TandemButton enlace="page-infoinstitucional">Información Institucional</TandemButton>
+    
 
    </div>
     

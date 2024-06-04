@@ -229,73 +229,63 @@ pre tt:after {
   content: none;
 }
 /* ------------------------------------------------------------------------ */
- /* footer{
-  background-color: rgba(10, 10, 10, 0.6);
-  color: #fff4db;
+.infoinst{
+  background-color: antiquewhite;
+  padding: 2em;
 }
-.footerfoto{
-  text-align: right;
-}
-
-.botones{
-  background-image: url('../images/Fuente.jpg');
-  text-align: center;
+.qrinicio{
+  background-color: antiquewhite;
   padding: 1em;
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: cover;
   align-items: center;
-  display: flex; 
-  flex-direction: column;
-  justify-content: center; 
-  gap: 2em;
+  text-align: center;
+  margin: 2em;
+  border: 3px solid #43381b;
+  box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+}
+.qrarchivo{
+  background-color: antiquewhite;
+  padding: 1em;
+  align-items: center;
+  text-align: center;
+  margin: 2em;
+  border: 3px solid #43381b;
+  box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+}
 
+header{
+  background-color:white;
+  height: 60px;
+  width: 100%;
+  /* position: fixed;
+  z-index: 3; */
   
 }
-.button{
+.crearr{
+  background-color: antiquewhite;
+  padding: 2em;
+  border: 3px solid #43381b;
+  box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.button-collapse{
   margin: 0; 
   padding: .5em; 
   border-radius: 8px; 
-  background-color:antiquewhite; 
-  color: #43381b; 
+  background-color:rgb(132, 130, 128); 
+  color: #000000; 
   border: 3px solid #43381b;
-  cursor: pointer;
-  transition: background-color 0.3s ease; 
-  box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
-  width: 380px; 
-  height: 100px; 
   text-decoration: none;
+  text-align: center;
+}
 
-} 
-.button:hover{
-  background-color: #69572B;
+.button-collapse:hover{
+  background-color: black;
   color: white;
 }
 
-.a{
-  margin: 2em;
-  color: #A59A80;
-}
-.ai{
-  color: #A59A80;
-}
-
-.layoute{ 
-  background-color: antiquewhite;
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
-  align-items: center;
+.tex-center{
   text-align: center;
 }
-
-@media  (max-width: 400px) {
-  footer{
-    margin: auto;
-    padding: 1em;
-  }
- .botones{
-  background-image: url('../images/Fuentepequeña.jpg');
- }
-} 
-.cajatitulo{
-  text-align: center;
-}  */

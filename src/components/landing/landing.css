@@ -18,12 +18,13 @@
   flex-direction: column;
   justify-content: center; 
   gap: 2em;
-
+  
   
 }
 
 .cajatitulo{
   text-align: center;
+  padding-top: 2em;
 }
 
 @media  (max-width: 400px) {
@@ -42,8 +43,8 @@
   cursor: pointer;
   transition: background-color 0.3s ease; 
   box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
-  width: 380px; 
-  height: 100px; 
+  width: 260px; 
+  height: 60px; 
   text-decoration: none;
 
 } 

@@ -1,13 +1,28 @@
 import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import './EmployeeLoginForm.css';
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+
 const EmployeeLoginForm = () => {
   return (
     <Layout>
+
+
+
       <div className="login-form-container">
+        
         <form className="login-form">
+          <StaticImage
+        src="../images/Logo_de_Patrimonio_Nacional.svg.png"
+        loading="eager"
+        width={250}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ marginBottom: `var(--space-3)` }}
+      />
           <h2>Acceso de Empleados</h2>
           <label htmlFor="username">Usuario:</label>
           <input type="text" id="username" name="username" required />
@@ -16,6 +31,8 @@ const EmployeeLoginForm = () => {
           <button type="submit">Ingresar</button>
         </form>
       </div>
+
+      <a href="/" role='button' className='button'>Volver a inicio</a>
     </Layout>
   );
 };
