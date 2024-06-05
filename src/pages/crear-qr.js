@@ -5,7 +5,7 @@ import Collapse2 from "../components/crearqr-componentes/collapse2";
 import MyComponent from "../components/crearqr-componentes/componente1";
 import TandemButton from "../components/button/tandembutton";
 import QRCode from 'qrcode.react';
-import { toPng } from 'html-to-image';
+import { toPng, toJpeg, toSvg } from 'html-to-image';
 import download from 'downloadjs';
 
 function Crearqr() {
@@ -28,6 +28,23 @@ function Crearqr() {
       download(dataUrl, 'qr-code.png');
     }
   };
+
+  const handleDownload2 = async () => {
+    if (qrRef.current) {
+      const dataUrl = await toJpeg(qrRef.current);
+      download(dataUrl, 'qr-code.jpeg');
+    }
+  };
+
+  const handleDownload3 = async () => {
+    if (qrRef.current) {
+      const dataUrl = await toSvg(qrRef.current);
+      download(dataUrl, 'qr-code.svg');
+    }
+  };
+
+
+
   const containerStyle = {
     backgroundColor: "beige",
     border: "2px solid black",
@@ -61,7 +78,9 @@ function Crearqr() {
         <p>{inputValue}</p>
         </div>
         <br />
-        <button onClick={handleDownload} className="button22">Descargar QR</button>
+        <button onClick={handleDownload} className="button22">Descargar QR png</button>
+        <button onClick={handleDownload2} className="button22">Descargar QR jpeg</button>
+        <button onClick={handleDownload3} className="button22">Descargar QR svg</button>
       </div>
     </Layout>
   );

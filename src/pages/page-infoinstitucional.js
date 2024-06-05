@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
 import "../components/layout.css";
-import { StaticImage } from "gatsby-plugin-image";
 import Accordion from "../components/accordion";
 import TandemButton from "../components/button/tandembutton";
 const Info = () => {
@@ -147,15 +146,6 @@ const Info = () => {
     <Layout>
       <div className="infoinst">
         <div className="imagecontainer">
-          <StaticImage
-            className="logopatrimonio"
-            src="../images/logo.png"
-            loading="eager"
-            width={100}
-            quality={100}
-            formats={["auto", "webp", "avif"]}
-            alt=""
-          />
         </div>
         <h1>SOBRE PATRIMONIO NACIONAL: CONOCE NUESTRA HISTORIA</h1>
         <p>
