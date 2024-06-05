@@ -274,7 +274,7 @@ header{
   margin: 0; 
   padding: .5em; 
   border-radius: 8px; 
-  background-color:rgb(132, 130, 128); 
+  background-color:rgb(185, 183, 181); 
   color: #000000; 
   border: 3px solid #43381b;
   text-decoration: none;
@@ -288,4 +288,31 @@ header{
 
 .tex-center{
   text-align: center;
+}
+
+.generar-qr{
+  background-color: antiquewhite;
+  height: 600px;
+  margin: 2em;
+  padding: 2em;
+}
+.qr-contenido{
+  background-color: #a99898;
+  color: white;
+  margin: 2em;
+  padding: 1em;
+}
+.button22{
+  margin: 0; 
+  padding: .5em; 
+  border-radius: 8px; 
+  background-color: #a99898; 
+  color: #000000; 
+  border: 3px solid #43381b;
+  text-decoration: none;
+  text-align: center;
+}
+.button22:hover{
+  background-color: black;
+  color: white;
 }
