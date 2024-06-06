@@ -3,7 +3,6 @@ import { useState, useRef } from "react";
 import Layout from "../components/layout";
 import Collapse2 from "../components/crearqr-componentes/collapse2";
 import MyComponent from "../components/crearqr-componentes/componente1";
-import TandemButton from "../components/button/tandembutton";
 import QRCode from 'qrcode.react';
 import { toPng, toJpeg, toSvg } from 'html-to-image';
 import download from 'downloadjs';
@@ -78,9 +77,10 @@ function Crearqr() {
         <p>{inputValue}</p>
         </div>
         <br />
-        <button onClick={handleDownload} className="button22">Descargar QR png</button>
-        <button onClick={handleDownload2} className="button22">Descargar QR jpeg</button>
-        <button onClick={handleDownload3} className="button22">Descargar QR svg</button>
+        <p>Descargar QR:</p>
+        <button onClick={handleDownload} className="button22">Png</button>
+        <button onClick={handleDownload2} className="button22">Jpeg</button>
+        <button onClick={handleDownload3} className="button22">Svg</button>
       </div>
     </Layout>
   );
