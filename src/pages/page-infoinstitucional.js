@@ -6,7 +6,7 @@ import TandemButton from "../components/button/tandembutton";
 const Info = () => {
   const accordionItems = [
     {
-      title: "DOBLE FUNCIÓN: CONSTITUCIONAL Y CULTURAL",
+      title: "DOBLE FUNCIÓN: CONSTITUCIONAL Y CULTURAL + ",
       content: (
         <>
           <p>
@@ -31,7 +31,7 @@ const Info = () => {
       ),
     },
     {
-      title: "PALACIOS Y ESTACIONES DEL AÑO",
+      title: "PALACIOS Y ESTACIONES DEL AÑO + ",
       content: (
         <>
           <p>
@@ -49,7 +49,7 @@ const Info = () => {
       ),
     },
     {
-      title: "DESDE LA EDAD MEDIA HASTA HOY",
+      title: "DESDE LA EDAD MEDIA HASTA HOY + ",
       content: (
         <>
           <p>
