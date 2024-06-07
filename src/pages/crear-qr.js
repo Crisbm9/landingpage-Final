@@ -4,8 +4,10 @@ import Layout from "../components/layout";
 import Collapse2 from "../components/crearqr-componentes/collapse2";
 import MyComponent from "../components/crearqr-componentes/componente1";
 import QRCode from 'qrcode.react';
+import download from "downloadjs";
 import { toPng, toJpeg, toSvg } from 'html-to-image';
-import download from 'downloadjs';
+import Collapse3 from "../components/crearqr-componentes/collapse3";
+
 
 function Crearqr() {
   const [inputValue, setInputValue] = useState('');
@@ -42,7 +44,26 @@ function Crearqr() {
     }
   };
 
+////////////////////////////
+const handleFormatChange = (event) => {
+  setSelectedFormat(event.target.value);
+};
+const [selectedFormat, setSelectedFormat] = useState('png');
+const handleDownload1 = async () => {
+  if (qrRef.current) {
+    let dataUrl;
+    if (selectedFormat === 'png') {
+      dataUrl = await toPng(qrRef.current);
+    } else if (selectedFormat === 'jpeg') {
+      dataUrl = await toJpeg(qrRef.current);
+    } else if (selectedFormat === 'svg') {
+      dataUrl = await toSvg(qrRef.current);
+    }
+    download(dataUrl, `qr-code.${selectedFormat}`);
+  }
+};
 
+///////////////////
 
   const containerStyle = {
     backgroundColor: "beige",
@@ -54,7 +75,7 @@ function Crearqr() {
   const colorOptions = ['black', 'blue', 'red', 'green', 'yellow', 'purple', 'orange', 'pink', 'magenta']; // Colores ampliados
   return (
     <Layout>
-      <div style={containerStyle}>
+      <div className="qr-generador" style={containerStyle}>
         <h1>GENERADOR DE QR</h1>
         <Collapse2 />
         <br />
@@ -72,15 +93,55 @@ function Crearqr() {
         </div>
         <br />
        <br />
-         {/* <TandemButton enlace="#">Generar QR</TandemButton> */}
         <p>Contenido del QR:</p>
         <p>{inputValue}</p>
         </div>
         <br />
-        <p>Descargar QR:</p>
+        
+
+        {/* ////////////////////////////////////// */}
+        <Collapse3 isCollapsed={false}>
+        <p>Selecciona el formato para descargar el QR</p>
+                <div className="radio-group">
+                  <label>
+                    <input
+                      type="radio"
+                      value="png"
+                      checked={selectedFormat === 'png'}
+                      onChange={handleFormatChange}
+                    />
+                    PNG
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      value="jpeg"
+                      checked={selectedFormat === 'jpeg'}
+                      onChange={handleFormatChange}
+                    />
+                    JPEG
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      value="svg"
+                      checked={selectedFormat === 'svg'}
+                      onChange={handleFormatChange}
+                    />
+                    SVG
+                  </label>
+                </div>
+                <button onClick={handleDownload1} className="button23">
+            Decargar QR
+          </button>
+      </Collapse3>
+                
+          
+    {/* //////////////////////// */}
+    {/* <p>Descargar QR:</p>
         <button onClick={handleDownload} className="button22">Png</button>
         <button onClick={handleDownload2} className="button22">Jpeg</button>
-        <button onClick={handleDownload3} className="button22">Svg</button>
+        <button onClick={handleDownload3} className="button22">Svg</button> */}
       </div>
     </Layout>
   );

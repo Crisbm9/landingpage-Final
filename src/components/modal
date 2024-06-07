@@ -1,0 +1,91 @@
+import React, { useState } from 'react';
+import './layout.css'; 
+import download from "downloadjs";
+import { toPng, toJpeg, toSvg } from "html-to-image";
+
+function ModalExport({ className, qrRef }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedFormat, setSelectedFormat] = useState('png');
+
+  const toggleModal1 = () => setIsOpen(!isOpen);
+
+  const handleFormatChange = (event) => {
+    setSelectedFormat(event.target.value);
+  };
+
+  const handleDownload = async () => {
+    if (!qrRef.current) return; // Handle potential missing qrRef
+
+    let dataUrl;
+    if (selectedFormat === 'png') {
+      dataUrl = await toPng(qrRef.current);
+    } else if (selectedFormat === 'jpeg') {
+      dataUrl = await toJpeg(qrRef.current);
+    } else if (selectedFormat === 'svg') {
+      dataUrl = await toSvg(qrRef.current);
+    }
+
+    if (dataUrl) {
+      download(dataUrl, `qr-code.${selectedFormat}`);
+      toggleModal1(); // Close the modal after successful download
+    }
+  };
+
+  return (
+    <div>
+      <button onClick={toggleModal1}>Descargar</button>
+
+      {isOpen && (
+        <div className={`modal ${className}`}>
+          <div className="modal-header">
+            <h3>Exportar</h3>
+            <button onClick={toggleModal1}>&times;</button>
+          </div>
+          <div className="modal-body">
+            <p>Selecciona el formato para descargar el QR</p>
+            <div className="radio-group">
+              <label>
+                <input
+                  type="radio"
+                  value="png"
+                  checked={selectedFormat === 'png'}
+                  onChange={handleFormatChange}
+                />
+                PNG
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="jpeg"
+                  checked={selectedFormat === 'jpeg'}
+                  onChange={handleFormatChange}
+                />
+                JPEG
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="svg"
+                  checked={selectedFormat === 'svg'}
+                  onChange={handleFormatChange}
+                />
+                SVG
+              </label>
+            </div>
+          </div>
+          <div className="modal-footer">
+            <button onClick={handleDownload}>Exportar</button>
+            <button onClick={toggleModal1}>Cancelar</button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+ModalExport.propTypes = {
+  className: PropTypes.string,
+  qrRef: PropTypes.object.isRequired,
+};
+
+export default ModalExport;
