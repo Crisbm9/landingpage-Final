@@ -14,6 +14,7 @@ function Crearqr() {
   const [qrColor, setQrColor] = useState('black');
   const [qrSize, setQrSize] = useState(100);
   const qrRef = useRef(null);
+  const [descargado, setDescargado] = useState(false);
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -23,26 +24,26 @@ function Crearqr() {
   const handleSizeChange = (size) => {
     setQrSize(parseInt(size, 10));
   };
-  const handleDownload = async () => {
-    if (qrRef.current) {
-      const dataUrl = await toPng(qrRef.current);
-      download(dataUrl, 'qr-code.png');
-    }
-  };
+  // const handleDownload = async () => {
+  //   if (qrRef.current) {
+  //     const dataUrl = await toPng(qrRef.current);
+  //     download(dataUrl, 'qr-code.png');
+  //   }
+  // };
 
-  const handleDownload2 = async () => {
-    if (qrRef.current) {
-      const dataUrl = await toJpeg(qrRef.current);
-      download(dataUrl, 'qr-code.jpeg');
-    }
-  };
+  // const handleDownload2 = async () => {
+  //   if (qrRef.current) {
+  //     const dataUrl = await toJpeg(qrRef.current);
+  //     download(dataUrl, 'qr-code.jpeg');
+  //   }
+  // };
 
-  const handleDownload3 = async () => {
-    if (qrRef.current) {
-      const dataUrl = await toSvg(qrRef.current);
-      download(dataUrl, 'qr-code.svg');
-    }
-  };
+  // const handleDownload3 = async () => {
+  //   if (qrRef.current) {
+  //     const dataUrl = await toSvg(qrRef.current);
+  //     download(dataUrl, 'qr-code.svg');
+  //   }
+  // };
 
 ////////////////////////////
 const handleFormatChange = (event) => {
@@ -50,14 +51,18 @@ const handleFormatChange = (event) => {
 };
 const [selectedFormat, setSelectedFormat] = useState('png');
 const handleDownload1 = async () => {
+  
   if (qrRef.current) {
     let dataUrl;
     if (selectedFormat === 'png') {
       dataUrl = await toPng(qrRef.current);
+      setDescargado(true)
     } else if (selectedFormat === 'jpeg') {
       dataUrl = await toJpeg(qrRef.current);
+      setDescargado(true)
     } else if (selectedFormat === 'svg') {
       dataUrl = await toSvg(qrRef.current);
+      setDescargado(true)
     }
     download(dataUrl, `qr-code.${selectedFormat}`);
   }
@@ -134,6 +139,7 @@ const handleDownload1 = async () => {
                 <button onClick={handleDownload1} className="button23">
             Decargar QR
           </button>
+          {descargado && <p className="pdescarga">¡El qr se ha descargado!</p>}
       </Collapse3>
                 
           

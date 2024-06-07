@@ -394,3 +394,7 @@ input[type="radio"] {
   border-radius: 50%; /* Create a circular shape */
   margin-right: 10px; /* Add spacing between radio buttons */
 }
+.pdescarga{
+  
+  text-align: center;
+}
