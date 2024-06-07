@@ -24,28 +24,7 @@ function Crearqr() {
   const handleSizeChange = (size) => {
     setQrSize(parseInt(size, 10));
   };
-  // const handleDownload = async () => {
-  //   if (qrRef.current) {
-  //     const dataUrl = await toPng(qrRef.current);
-  //     download(dataUrl, 'qr-code.png');
-  //   }
-  // };
-
-  // const handleDownload2 = async () => {
-  //   if (qrRef.current) {
-  //     const dataUrl = await toJpeg(qrRef.current);
-  //     download(dataUrl, 'qr-code.jpeg');
-  //   }
-  // };
-
-  // const handleDownload3 = async () => {
-  //   if (qrRef.current) {
-  //     const dataUrl = await toSvg(qrRef.current);
-  //     download(dataUrl, 'qr-code.svg');
-  //   }
-  // };
-
-////////////////////////////
+  
 const handleFormatChange = (event) => {
   setSelectedFormat(event.target.value);
 };
@@ -67,8 +46,6 @@ const handleDownload1 = async () => {
     download(dataUrl, `qr-code.${selectedFormat}`);
   }
 };
-
-///////////////////
 
   const containerStyle = {
     backgroundColor: "beige",
@@ -104,7 +81,7 @@ const handleDownload1 = async () => {
         <br />
         
 
-        {/* ////////////////////////////////////// */}
+       
         <Collapse3 isCollapsed={false}>
         <p>Selecciona el formato para descargar el QR</p>
                 <div className="radio-group">
@@ -143,11 +120,6 @@ const handleDownload1 = async () => {
       </Collapse3>
                 
           
-    {/* //////////////////////// */}
-    {/* <p>Descargar QR:</p>
-        <button onClick={handleDownload} className="button22">Png</button>
-        <button onClick={handleDownload2} className="button22">Jpeg</button>
-        <button onClick={handleDownload3} className="button22">Svg</button> */}
       </div>
     </Layout>
   );
