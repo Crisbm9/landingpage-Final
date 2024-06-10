@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { FaQuestionCircle } from "react-icons/fa";
 
 function Collapse({ isCollapsed, children }) {
   const [show, setShow] = useState(isCollapsed);
@@ -10,7 +11,9 @@ function Collapse({ isCollapsed, children }) {
 
   return (
     <div className={`collapse ${show ? 'show' : ''}`}>
-      <button onClick={handleToggle} className='button-collapse'>Instrucciones</button>
+      <button onClick={handleToggle} className='button-collapse'>
+      Ayuda<FaQuestionCircle/>
+      </button>
       {show && children}
     </div>
   );

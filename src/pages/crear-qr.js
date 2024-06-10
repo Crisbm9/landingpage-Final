@@ -4,9 +4,13 @@ import Layout from "../components/layout";
 import Collapse2 from "../components/crearqr-componentes/collapse2";
 import MyComponent from "../components/crearqr-componentes/componente1";
 import QRCode from 'qrcode.react';
-import download from "downloadjs";
 import { toPng, toJpeg, toSvg } from 'html-to-image';
+import download from "downloadjs";
 import Collapse3 from "../components/crearqr-componentes/collapse3";
+import CenteredTabs from "../components/tabs";
+import Modal from "../components/modal";
+
+
 
 
 function Crearqr() {
@@ -15,6 +19,7 @@ function Crearqr() {
   const [qrSize, setQrSize] = useState(100);
   const qrRef = useRef(null);
   const [descargado, setDescargado] = useState(false);
+
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -29,6 +34,17 @@ const handleFormatChange = (event) => {
   setSelectedFormat(event.target.value);
 };
 const [selectedFormat, setSelectedFormat] = useState('png');
+///////////////////////////////////////////////////
+const [showModal, setShowModal] = useState(false); // State to manage modal visibility
+const handleHelpClick = () => {
+  setShowModal(true);
+};
+const handleCloseModal = () => {
+  setShowModal(false);
+};
+
+/////////////////////////////////////////////
+
 const handleDownload1 = async () => {
   
   if (qrRef.current) {
@@ -57,32 +73,45 @@ const handleDownload1 = async () => {
   const colorOptions = ['black', 'blue', 'red', 'green', 'yellow', 'purple', 'orange', 'pink', 'magenta']; // Colores ampliados
   return (
     <Layout>
+
       <div className="qr-generador" style={containerStyle}>
         <h1>GENERADOR DE QR</h1>
         <Collapse2 />
         <br />
-        <p>Introduce tu texto o url aquí:</p>
+
+        <div className="white">
+        <CenteredTabs></CenteredTabs>
         <input type="text" value={inputValue} onChange={handleInputChange} />
+        <br></br>
+        <div ref={qrRef}>
+          <br></br>
+          <h4>Tu QR generado:</h4>
+          <QRCode value={inputValue} size={qrSize} fgColor={qrColor} />
+        </div>
+        </div>
+
+        <div className="white">
+          <h3>Personaliza tu QR:</h3>
         <MyComponent
           onColorChange={handleColorChange}
           onSizeChange={handleSizeChange}
           colorOptions={colorOptions}
         />
-        <br /> 
-        <div className="qr-contenido">
-        <div ref={qrRef}>
-          <QRCode value={inputValue} size={qrSize} fgColor={qrColor} />
         </div>
-        <br />
-       <br />
-        <p>Contenido del QR:</p>
-        <p>{inputValue}</p>
-        </div>
-        <br />
+        
+        {/* <div className="qr-contenido"> */}
+        
+       
+       
+        {/* <p>Contenido del QR:</p>
+        <p>{inputValue}</p> */}
+        
+        
         
 
-       
         <Collapse3 isCollapsed={false}>
+          {/* <Modal show={showModal} handleClose={handleCloseModal}> */}
+          <div className="white">
         <p>Selecciona el formato para descargar el QR</p>
                 <div className="radio-group">
                   <label>
@@ -117,8 +146,16 @@ const handleDownload1 = async () => {
             Decargar QR
           </button>
           {descargado && <p className="pdescarga">¡El qr se ha descargado!</p>}
-      </Collapse3>
+      
+          {/* </Modal> */}
+          </div>
+      </Collapse3> 
                 
+
+
+
+
+
           
       </div>
     </Layout>
