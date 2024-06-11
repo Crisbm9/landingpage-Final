@@ -47,7 +47,7 @@ export default function CenteredTabs() {
       <h3>Introduce tu Texto:</h3>
       </TabPanel>
       {/* <TabPanel value={value} index={2}>
-      Introduce tus Coordenadas:
+      <h3>Introduce tus Coordenadas: (Latitud,Longitud)</h3>
       </TabPanel> */}
     </Box>
   );

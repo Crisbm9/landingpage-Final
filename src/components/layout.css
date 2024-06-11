@@ -271,7 +271,7 @@ header{
 }
 
 .button-collapse{
-  margin: 0; 
+  margin: 1em; 
   padding: .5em; 
   border-radius: 8px; 
   background-color:rgb(185, 183, 181); 
@@ -333,7 +333,7 @@ border-radius: 1em;
 
 .button23{
   margin: 1em; 
-  padding: 1em; 
+  padding: 0.5em; 
   border-radius: 8px; 
   background-color: #3a1d09; 
   color: #d5d1d1; 
@@ -418,4 +418,21 @@ input[type="text"] {
   width: 200px; 
   height: 50px; 
   
+}
+
+/* //////////////////////// */
+.compartir-container {
+  text-align: center;
+  margin: 20px auto;
+}
+.compartir-header {
+  margin-bottom: 10px;
+}
+.compartir-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.compartir-icons > * {
+  margin: 0 5px;
 }

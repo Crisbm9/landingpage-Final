@@ -8,7 +8,14 @@ import { toPng, toJpeg, toSvg } from 'html-to-image';
 import download from "downloadjs";
 import Collapse3 from "../components/crearqr-componentes/collapse3";
 import CenteredTabs from "../components/tabs";
-import Modal from "../components/modal";
+import Modall from "../components/modal";
+/////modal/////
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+////////////////
+
 
 
 
@@ -34,15 +41,21 @@ const handleFormatChange = (event) => {
   setSelectedFormat(event.target.value);
 };
 const [selectedFormat, setSelectedFormat] = useState('png');
-///////////////////////////////////////////////////
-const [showModal, setShowModal] = useState(false); // State to manage modal visibility
-const handleHelpClick = () => {
-  setShowModal(true);
+////////////////////modal///////////////////////////////
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
 };
-const handleCloseModal = () => {
-  setShowModal(false);
-};
-
+const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 /////////////////////////////////////////////
 
 const handleDownload1 = async () => {
@@ -77,7 +90,7 @@ const handleDownload1 = async () => {
       <div className="qr-generador" style={containerStyle}>
         <h1>GENERADOR DE QR</h1>
         <Collapse2 />
-        <br />
+        
 
         <div className="white">
         <CenteredTabs></CenteredTabs>
@@ -98,22 +111,25 @@ const handleDownload1 = async () => {
           colorOptions={colorOptions}
         />
         </div>
-        
-        {/* <div className="qr-contenido"> */}
-        
-       
-       
-        {/* <p>Contenido del QR:</p>
-        <p>{inputValue}</p> */}
-        
-        
-        
+    
+        <Modall></Modall>
+{/* ////////////////modal/////////////////////// */}
+<div>
+      <Button onClick={handleOpen} className='button-collapse'>Dercargar</Button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+          <p>Selecciona el formato para descargar el QR</p>
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            {/* ////////////////////////////////// */}
 
-        <Collapse3 isCollapsed={false}>
-          {/* <Modal show={showModal} handleClose={handleCloseModal}> */}
-          <div className="white">
-        <p>Selecciona el formato para descargar el QR</p>
-                <div className="radio-group">
+            <div className="radio-group">
                   <label>
                     <input
                       type="radio"
@@ -147,9 +163,17 @@ const handleDownload1 = async () => {
           </button>
           {descargado && <p className="pdescarga">¡El qr se ha descargado!</p>}
       
-          {/* </Modal> */}
-          </div>
-      </Collapse3> 
+      
+            {/* ////////////////////////////////// */}
+          </Typography>
+          <Button onClick={handleClose}>cerrar</Button>
+        </Box>
+      </Modal>
+    </div>
+{/* ///////////////////fin modal//////////////////// */}
+      
+         
+          
                 
 
 
