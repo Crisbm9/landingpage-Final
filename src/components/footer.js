@@ -26,8 +26,9 @@ const Footer = () => {
 
 <div className='footerfoto'>
 
+
 <StaticImage
-  src="../images/logo-tandem.png"
+  src="../images/logo2.png"
   loading="eager"
   width={75}
   quality={95}
@@ -35,6 +36,7 @@ const Footer = () => {
   alt=""
   style={{ marginBottom: `var(--space-3)` }}
 />
+
 </div>
   </footer>
   );
