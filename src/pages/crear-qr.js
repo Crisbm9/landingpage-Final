@@ -89,9 +89,9 @@ function Crearqr() {
             latLng={latLng} 
             setLatLng={setLatLng} 
             setInputType={setInputType}
-          />
-          <br></br>
-          <div ref={qrRef}>
+          /> 
+          </div>
+          <div ref={qrRef} className="white">
             <br></br>
             <h4>Tu QR generado:</h4>
             <QRCode
@@ -99,7 +99,7 @@ function Crearqr() {
               size={qrSize}
               fgColor={qrColor}
             />
-          </div>
+        
         </div>
 
         <div className="white">
@@ -111,7 +111,7 @@ function Crearqr() {
           />
         </div>
         <div className="modales">
-          <Modall></Modall>
+          {/* <Modall></Modall> */}
            <Button onClick={handleOpen} className='button-collapse'>Descargar</Button>
           <Modal
             open={open}

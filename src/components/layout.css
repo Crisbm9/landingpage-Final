@@ -271,19 +271,19 @@ header{
 }
 
 .button-collapse{
-  margin: 1em; 
-  padding: .5em; 
-  border-radius: 8px; 
-  background-color:rgb(185, 183, 181); 
-  color: #000000; 
-  border: 3px solid #43381b;
-  text-decoration: none;
-  text-align: center;
+  margin: 1em!important; 
+  padding: .5em!important; 
+  border-radius: 8px!important; 
+  background-color:rgb(185, 183, 181)!important; 
+  color: #000000!important; 
+  border: 3px solid #43381b!important;
+  text-decoration: none!important;
+  text-align: center!important;
 }
 
 .button-collapse:hover{
-  background-color: black;
-  color: white;
+  background-color: black!important;
+  color: white!important;
 }
 
 .tex-center{
@@ -364,7 +364,7 @@ input[type="radio"] {
 .white{
   background-color: white;
   padding-bottom: 1em;
-  margin: 2em;
+  margin: 1em;
 }
 .collapsi{
   text-align: left;
@@ -394,6 +394,6 @@ input[type="text"] {
 
 .modales{
   display: flex!important;
-  flex-direction: row!important;
+  flex-direction: column !important;
   align-items: center!important;
 }
