@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import "../components/layout.css"
 import TandemButton from "../components/button/tandembutton";
 
+
 function Inicio(){
   return(
 <Layout>
