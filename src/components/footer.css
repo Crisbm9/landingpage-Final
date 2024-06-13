@@ -3,16 +3,20 @@
 footer{
   background-color: black;
   color: #fff4db;
+  padding: 1em;
 }
 .footerfoto{
-  text-align: right;
+
   padding: 1em;
-  margin: 1em;
-  
+  display: grid;
+  grid-template-columns: 100px 80px 120px 90px;
+  justify-content: end;
+  column-gap: 15px;
 }
 .a{
   margin: 2em;
   color: #A59A80;
+  
 }
 .ai{
   color: #A59A80;

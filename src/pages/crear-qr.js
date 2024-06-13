@@ -93,7 +93,7 @@ function Crearqr() {
           </div>
           <div ref={qrRef} className="white">
             <br></br>
-            <h4>Tu QR generado:</h4>
+            <h3>Tu QR generado:</h3>
             <QRCode
               value={inputType === 'coordinates' ? `${latLng.lat},${latLng.lng}` : inputValue}
               size={qrSize}
