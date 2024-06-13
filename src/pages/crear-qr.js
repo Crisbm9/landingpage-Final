@@ -13,6 +13,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import MapaConMarcador from "../components/mapa";
+import { FaDownload, FaEdit } from 'react-icons/fa';
 
 function Crearqr() {
   const [inputValue, setInputValue] = useState('');
@@ -92,7 +93,6 @@ function Crearqr() {
           /> 
           </div>
           <div ref={qrRef} className="white">
-            <br></br>
             <h3>Tu QR generado:</h3>
             <QRCode
               value={inputType === 'coordinates' ? `${latLng.lat},${latLng.lng}` : inputValue}
@@ -103,7 +103,7 @@ function Crearqr() {
         </div>
 
         <div className="white">
-          <h3>Personaliza tu QR:</h3>
+          <h3><FaEdit style={{ color: '#43381b' }}/>Personaliza tu QR:</h3>
           <MyComponent
             onColorChange={handleColorChange}
             onSizeChange={handleSizeChange}
@@ -112,7 +112,7 @@ function Crearqr() {
         </div>
         <div className="modales">
           {/* <Modall></Modall> */}
-           <Button onClick={handleOpen} className='button-collapse'>Descargar</Button>
+           <Button onClick={handleOpen} className='button-collapse'>Descargar <FaDownload style={{ color: '#43381b' }}/></Button>
           <Modal
             open={open}
             onClose={handleClose}
@@ -163,6 +163,7 @@ function Crearqr() {
           </Modal>
         </div>
       </div>
+      <a href="/" role='button' className='button'>Volver a inicio</a>
     </Layout>
   );
 }

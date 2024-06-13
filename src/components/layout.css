@@ -362,9 +362,11 @@ input[type="radio"] {
 
 /* ////////////////////////////////////////7 */
 .white{
-  background-color: white;
+  background: linear-gradient(0deg, rgba(98,95,95,1) 0%, rgba(101,83,77,1) 5%, rgba(175,172,172,1) 58%, rgba(207,204,204,1) 75%);
   padding-bottom: 1em;
   margin: 1em;
+  border-radius: 10px;
+  border: 3px solid #43381b;
 }
 .collapsi{
   text-align: left;
@@ -396,4 +398,8 @@ input[type="text"] {
   display: flex!important;
   flex-direction: column !important;
   align-items: center!important;
+}
+
+.icono{
+  font-size: 15px;
 }

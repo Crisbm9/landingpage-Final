@@ -12,7 +12,7 @@ function Collapse({ isCollapsed, children }) {
   return (
     <div className={`collapse ${show ? 'show' : ''}`}>
       <button onClick={handleToggle} className='button-collapse'>
-      Ayuda<FaQuestionCircle/>
+      Ayuda<FaQuestionCircle className='icono'/>
       </button>
       {show && children}
     </div>
