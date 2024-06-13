@@ -23,7 +23,7 @@ const Footer = () => {
 <a className='a' href="#">Política de Privacidad</a>
 <a className='a' href="#">Política de cookies</a>
 
-
+<br></br>
 <div className='footerfoto'>
 
 
@@ -36,7 +36,33 @@ const Footer = () => {
   alt=""
   style={{ marginBottom: `var(--space-3)` }}
 />
-
+<StaticImage
+  src="../images/logo1.png"
+  loading="eager"
+  width={75}
+  quality={95}
+  formats={["auto", "webp", "avif"]}
+  alt=""
+  style={{ marginBottom: `var(--space-3)` }}
+/>
+<StaticImage
+  src="../images/logo3.png"
+  loading="eager"
+  width={75}
+  quality={95}
+  formats={["auto", "webp", "avif"]}
+  alt=""
+  style={{ marginBottom: `var(--space-3)` }}
+/>
+<StaticImage
+  src="../images/logo5.png"
+  loading="eager"
+  width={75}
+  quality={95}
+  formats={["auto", "webp", "avif"]}
+  alt=""
+  style={{ marginBottom: `var(--space-3)` }}
+/>
 </div>
   </footer>
   );

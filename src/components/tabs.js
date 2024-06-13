@@ -58,7 +58,7 @@ export default function CenteredTabs({ inputValue, setInputValue, latLng, setLat
       <Tabs value={value} onChange={handleChange} centered>
         <Tab label="URL" />
         <Tab label="Texto" />
-        <Tab label="Coordenadas" />
+        <Tab label="Lugar" />
       </Tabs>
       <TabPanel value={value} index={0}>
         <h3>Introduce tu URL:</h3>
