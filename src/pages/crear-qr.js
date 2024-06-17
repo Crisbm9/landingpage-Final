@@ -92,14 +92,15 @@ function Crearqr() {
             setInputType={setInputType}
           /> 
           </div>
-          <div ref={qrRef} className="white">
+          <div  className="white">
             <h3>Tu QR generado:</h3>
+            <div ref={qrRef}>
             <QRCode
               value={inputType === 'coordinates' ? `${latLng.lat},${latLng.lng}` : inputValue}
               size={qrSize}
               fgColor={qrColor}
             />
-        
+            </div>
         </div>
 
         <div className="white">
