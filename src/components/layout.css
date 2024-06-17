@@ -371,11 +371,11 @@ input[type="radio"] {
 .collapsi{
   text-align: left;
 }
-input[type="text"] {
+/* input[type="text"] {
   width: 200px; 
   height: 50px; 
   
-}
+} */
 
 /* //////////////////////// */
 .compartir-container {
@@ -402,4 +402,8 @@ input[type="text"] {
 
 .icono{
   font-size: 15px;
+}
+.divcollapse{
+  text-align: center;
+  align-items: center;
 }

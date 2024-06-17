@@ -26,7 +26,7 @@ function Landing(){
     <div className="botones">
 
     
-    <TandemButton enlace="inicio" >Acceso empleados</TandemButton>
+    <TandemButton enlace="page-2" >Acceso empleados</TandemButton>
     
     <br></br>
     

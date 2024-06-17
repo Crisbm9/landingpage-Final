@@ -9,7 +9,7 @@ function Collapse3({ isCollapsed, children }) {
 
   return (
     <div className={`collapse ${show ? 'show' : ''}`}>
-      <button onClick={handleToggle} className='button-collapse'>Opciones de descarga</button>
+      <button onClick={handleToggle} className='button-collapse'>Protección de datos</button>
       {show && children}
     </div>
   );

@@ -23,16 +23,20 @@ const EmployeeLoginForm = () => {
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
-          <h2>Acceso de Empleados</h2>
+          <h2>Inicio de sesión</h2>
           <label htmlFor="username">Usuario:</label>
           <input type="text" id="username" name="username" required />
           <label htmlFor="password">Contraseña:</label>
           <input type="password" id="password" name="password" required />
-          <button type="submit">Ingresar</button>
+          <button type="submit">Acceder</button>
+          <br></br>
+          <a href="/formulario" role='button' >Registrarse</a>
         </form>
       </div>
 
       <a href="/" role='button' className='button'>Volver a inicio</a>
+      <a href="/inicio" role='button' className='button'>Siguiente</a>
+      
     </Layout>
   );
 };
