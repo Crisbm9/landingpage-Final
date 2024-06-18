@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import "./EmployeeLoginForm.css"
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
-import Collapse4 from '../components/crearqr-componentes/collapse4';
-import Modal2 from '../components/modal2';
+
+
 
 const Register = () => {
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [delegacion, setDelegacion] = useState('');
 
     const handleRegister = async () => {
         try {
@@ -53,6 +54,14 @@ const Register = () => {
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
             />
+            <label htmlFor="delegacion">Delegación:</label>
+            <input
+                type="text"
+                placeholder="Delegacion"
+                id="delegacion"
+                value={delegacion}
+                onChange={(e) => setDelegacion(e.target.value)}
+            />
             <label htmlFor="email">Email:</label>
             <input
                 type="email"
@@ -70,13 +79,13 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
             />
             <button onClick={handleRegister}>Registrarse</button>
-            <br></br>
             
             </form>
             
         </div>
+       
         <div className='divcollapse'>
-        <Modal2></Modal2>
+        
 
         </div>
         <a href="/" role='button' className='button'>Volver a inicio</a>

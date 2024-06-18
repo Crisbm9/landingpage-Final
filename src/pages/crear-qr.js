@@ -27,6 +27,7 @@ function Crearqr() {
 
   const handleColorChange = (color) => {
     setQrColor(color);
+    
   };
   
   const handleSizeChange = (size) => {

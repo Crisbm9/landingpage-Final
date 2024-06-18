@@ -23,7 +23,7 @@ export default function Modal2() {
 
   return (
     <div>
-      <Button onClick={handleOpen} className='button-collapse'>Política de datos</Button>
+      <Button onClick={handleOpen} className='botonmodal2'>Política de datos</Button>
       <Modal
         open={open}
         onClose={handleClose}
