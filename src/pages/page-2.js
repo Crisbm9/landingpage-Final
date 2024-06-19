@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import './EmployeeLoginForm.css';
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import LoginForm from "../components/login";
 
 const EmployeeLoginForm = () => {
   return (
@@ -13,7 +14,7 @@ const EmployeeLoginForm = () => {
 
       <div className="login-form-container">
         
-        <form className="login-form">
+        <div className="login-form">
           <StaticImage
         src="../images/Logo_de_Patrimonio_Nacional.svg.png"
         loading="eager"
@@ -23,19 +24,9 @@ const EmployeeLoginForm = () => {
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
-          <h2>Inicio de sesión</h2>
-          <label htmlFor="username">Usuario:</label>
-          <input type="text" id="username" name="username" placeholder="Usuario" required />
-          <label htmlFor="password">Contraseña:</label>
-          <input type="password" id="password" name="password" placeholder="Contraseña" required />
-          <button type="submit">Acceder</button>
-          <br></br>
-          <br></br>
-          <a href="#" role='button' >¿Olvidaste tu contraseña?</a>
-          <br></br>
-          <br></br>
-          <a href="/formulario" role='button' >Registrarse</a>
-        </form>
+          <LoginForm></LoginForm>
+        </div>
+        
       </div>
 
       <a href="/" role='button' className='button'>Volver a inicio</a>
