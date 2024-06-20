@@ -1,7 +1,7 @@
 import * as React from "react"
 
 const LoginForm = () => {
-  
+
   return (
    <> 
    <h2>Inicio de sesión</h2>

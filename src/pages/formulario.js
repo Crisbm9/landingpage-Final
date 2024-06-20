@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./EmployeeLoginForm.css"
+import "./LoginForm.css"
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import Registro from '../components/registro';

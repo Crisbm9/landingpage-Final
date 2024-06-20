@@ -1,7 +1,6 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
-import './EmployeeLoginForm.css';
+import './LoginForm.css';
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import LoginForm from "../components/login";
