@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { useState } from "react";
 import MapaConMarcador from './mapa';
 
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -65,11 +66,11 @@ export default function CenteredTabs({ inputValue, setInputValue, latLng, setLat
       </Tabs>
       <TabPanel value={value} index={0}>
         <h3>Introduce tu URL:</h3>
-        <input type="text" value={inputValue} onChange={handleInputChange} />
+        <input type="text" value={inputValue} onChange={handleInputChange} className='inputtabs'/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <h3>Introduce tu Texto:</h3>
-        <input type="text" value={inputValue} onChange={handleInputChange} />
+        <input type="text" value={inputValue} onChange={handleInputChange} className='inputtabs' />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <h3>Introduce tus Coordenadas: (Latitud, Longitud)</h3>

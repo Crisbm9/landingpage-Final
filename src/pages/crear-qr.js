@@ -115,7 +115,7 @@ function Crearqr() {
         <div className="modales">
           {/* <Modall></Modall> */}
            <Button onClick={handleOpen} className='button-collapse'>Descargar <FaDownload style={{ color: '#43381b' }}/></Button>
-           <Button className='button-collapse'>Guardar <FaSave style={{ color: '#43381b' }}/></Button>
+           <Button className='button-collapse'>Guardar <FaSave style={{ color: '#43381b' }} /></Button>
           <Modal
             open={open}
             onClose={handleClose}
