@@ -32,23 +32,27 @@ const Login = () => {
   return (
     <div>
       <h3>Acceso empleados</h3>
+      <label htmlFor='email'>Email:</label>
       <input
         type="email"
         placeholder="Email"
+        id='email'
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
+      <label htmlFor='contrasena'>Contraseña:</label>
       <input
         type="password"
-        placeholder="Password"
+        placeholder="Contraseña"
+        id='contrasena'
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>Entrar</button>
+      <button onClick={handleLogin} className='buform'>Entrar</button>
       <p>{message}</p>
-      <a href="#" role='button' >¿Olvidaste tu contraseña?</a>
+      <a href="/contrasenia" role='button' className='aform'>¿Olvidaste tu contraseña?</a>
       <br></br>
-      <a href="/formulario" role='button' >Registrarse</a>
+      <a href="/formulario" role='button' className='aform' >Registrarse</a>
     </div>
   );
 };

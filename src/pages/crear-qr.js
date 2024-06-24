@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import MapaConMarcador from "../components/mapa";
-import { FaDownload, FaEdit } from 'react-icons/fa';
+import { FaDownload, FaEdit, FaSave } from 'react-icons/fa';
 
 function Crearqr() {
   const [inputValue, setInputValue] = useState('');
@@ -115,6 +115,7 @@ function Crearqr() {
         <div className="modales">
           {/* <Modall></Modall> */}
            <Button onClick={handleOpen} className='button-collapse'>Descargar <FaDownload style={{ color: '#43381b' }}/></Button>
+           <Button className='button-collapse'>Guardar <FaSave style={{ color: '#43381b' }}/></Button>
           <Modal
             open={open}
             onClose={handleClose}

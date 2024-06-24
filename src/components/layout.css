@@ -408,3 +408,9 @@ input[type="radio"] {
   align-items: center;
 }
 
+.aform{
+ color: #bc90d7;
+}
+.buform{
+  background-color: #d3addd;
+}
