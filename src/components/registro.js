@@ -5,7 +5,6 @@ const Registro = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [departamento, setDepartamento]= useState('');
-    // const [resServidor, setResServidor]=useState(false)
     const [message, setMessage] = useState('');
 
     const hadleNombre=(e) => setNombre(e.target.value);
@@ -29,9 +28,8 @@ const Registro = () => {
                 })
             });
             const data = await response.json();
-            console.log(data);
-            setMessage('Registro exitoso');
-            // setResServidor=(true)
+            
+            setMessage(data.message);
         } catch (error) {
             console.error('Error registrando usuario', error);
             setMessage('Error en el registro');
@@ -40,9 +38,7 @@ const Registro = () => {
 
     return (
         <div>
-          {/* <div className='respuesta'>
-            {resServidor&& 'correcto'}
-          </div> */}
+          
           <label htmlFor='nombre'>Nombre:</label>
             <input
                 type="text"
@@ -76,6 +72,7 @@ const Registro = () => {
                 onChange={hadlePassword}
             />
             <button onClick={handleRegistro}>Registro</button>
+            {message && <p>{message}</p>}
         </div>
     );
 };

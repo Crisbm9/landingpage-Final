@@ -18,7 +18,6 @@ const Login = () => {
       });
       const data = await response.json();
       if (data.message === 'Login exitoso') {
-        // Aquí podrías guardar el usuario en el estado global o en localStorage
         console.log(data.user);
         setMessage('Login exitoso');
       } else {
