@@ -20,6 +20,7 @@ const Login = () => {
       if (data.message === 'Login exitoso') {
         console.log(data.user);
         setMessage('Login exitoso');
+        window.location.href = '/inicio';
       } else {
         setMessage('Credenciales incorrectas');
       }

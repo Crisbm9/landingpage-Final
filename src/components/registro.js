@@ -28,7 +28,7 @@ const Registro = () => {
                 })
             });
             const data = await response.json();
-            
+            window.location.href = '/inicio';
             setMessage(data.message);
         } catch (error) {
             console.error('Error registrando usuario', error);

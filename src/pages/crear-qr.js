@@ -14,6 +14,8 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import MapaConMarcador from "../components/mapa";
 import { FaDownload, FaEdit, FaSave } from 'react-icons/fa';
+import SaveDb from "../components/savedb";
+
 
 function Crearqr() {
   const [inputValue, setInputValue] = useState('');
@@ -24,6 +26,20 @@ function Crearqr() {
   const [descargado, setDescargado] = useState(false);
   const [inputType, setInputType] = useState('url');
   const [selectedFormat, setSelectedFormat] = useState('png');
+
+  /////////////////
+  const [nombre, setNombre] = useState('');
+  const [descripcion, setDescripcion] = useState('');
+
+  const handleNombreChange = (event) => {
+    setNombre(event.target.value);
+  };
+
+  const handleDescripcionChange = (event) => {
+    setDescripcion(event.target.value);
+  };
+//////////////////////////
+
 
   const handleColorChange = (color) => {
     setQrColor(color);
@@ -114,8 +130,29 @@ function Crearqr() {
         </div>
         <div className="modales">
           {/* <Modall></Modall> */}
-           <Button onClick={handleOpen} className='button-collapse'>Descargar <FaDownload style={{ color: '#43381b' }}/></Button>
-           <Button className='button-collapse'>Guardar <FaSave style={{ color: '#43381b' }} /></Button>
+        {/* <SaveDb data={inputValue} nref="manolita" desc="paca" userId="1"></SaveDb> */}
+          
+        
+  <div className="white gr">
+    <h3><FaSave></FaSave>Guardar</h3>       
+  <ul><label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" value={nombre} onChange={handleNombreChange}/>
+ </ul>
+ <ul>
+  <label for="descripcion">Descripción:</label>
+  <input type="text" id="descripcion" name="descripcion" value={descripcion} onChange={handleDescripcionChange} />
+    </ul>            
+    <SaveDb 
+                data={inputType === 'coordinates' ? `${latLng.lat},${latLng.lng}` : inputValue} 
+                nref={nombre} 
+                desc={descripcion} 
+                
+                >
+                </SaveDb>
+    </div>   
+
+    <Button onClick={handleOpen} className='button-collapse'>Descargar <FaDownload style={{ color: '#43381b' }}/></Button>
+          
           <Modal
             open={open}
             onClose={handleClose}
@@ -164,9 +201,13 @@ function Crearqr() {
               <Button onClick={handleClose}>Cerrar</Button>
             </Box>
           </Modal>
+
+
         </div>
       </div>
       <a href="/" role='button' className='button'>Volver a inicio</a>
+      
+    
     </Layout>
   );
 }
