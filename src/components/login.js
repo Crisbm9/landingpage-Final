@@ -6,6 +6,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  
 
   const handleLogin = async () => {
     try {
@@ -20,6 +21,9 @@ const Login = () => {
       if (data.message === 'Login exitoso') {
         console.log(data.user);
         setMessage('Login exitoso');
+        localStorage.setItem('tandem_nombre', data.user.nombre);
+        localStorage.setItem('tandem_email', data.user.email);
+        localStorage.setItem('tandem_id', data.user.id);
         window.location.href = '/inicio';
       } else {
         setMessage('Credenciales incorrectas');

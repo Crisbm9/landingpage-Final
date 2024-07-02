@@ -25,6 +25,7 @@ const Header = ({ siteTitle }) => (
         style={{ marginBottom: `var(--space-3)` }}
       />
       </a>
+      <a href="/profile" role='button' className='aform'>Perfil</a>
   </header>
 )
 

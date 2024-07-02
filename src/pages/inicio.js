@@ -6,7 +6,8 @@ import TandemButton from "../components/button/tandembutton";
 
 
 function Inicio(){
-  const nombreUser =  localStorage.getItem('tndm_nombre')
+  const nombreUser =  localStorage.getItem('tndm_name')
+  const email=localStorage.getItem('tndm_email')
   return(
 <Layout>
   <div className="qrinicio">
@@ -21,7 +22,9 @@ function Inicio(){
         style={{ marginBottom: `var(--space-3)` }}
       />
       <br></br>
-      <p>¡Bienvenido {nombreUser}!</p>
+      <p>¡Bienvenido {localStorage.getItem('tandem_nombre')}!</p>
+
+      
     <TandemButton enlace="/crear-qr" >Crear QR</TandemButton>
   </div>
   
