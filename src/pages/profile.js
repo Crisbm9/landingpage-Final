@@ -7,7 +7,7 @@ const Profile = () => {
   return (
     <>
       <Layout>
-        <div className="white">
+        <div className="qr-contenido">
       <p>Nombre: {localStorage.getItem('tandem_nombre')}</p>
       <p>Email: {localStorage.getItem('tandem_email')}</p>
       <p>Id: {localStorage.getItem('tandem_id')}</p>
