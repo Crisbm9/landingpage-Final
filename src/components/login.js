@@ -24,6 +24,7 @@ const Login = () => {
         localStorage.setItem('tandem_nombre', data.user.nombre);
         localStorage.setItem('tandem_email', data.user.email);
         localStorage.setItem('tandem_id', data.user.id);
+        localStorage.setItem('tandem_role', data.user.role);
         window.location.href = '/inicio';
       } else {
         setMessage('Credenciales incorrectas');

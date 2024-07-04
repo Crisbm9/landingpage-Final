@@ -422,3 +422,8 @@ input[type="radio"] {
 .gr{
   width: 95%;
 }
+
+/* //////////////////////////////// */
+.headerperfil{
+  float: right;
+}

@@ -2,18 +2,12 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import "./layout.css"
+import PerfilOpc from "./perfilopc"
 
 
 const Header = ({ siteTitle }) => (
-  <header
-    // style={{
-    //   margin: `0`,
-    //   padding: `var(--space-4) var(--size-gutter)`,
-    //   display: `flex`,
-    //   alignItems: `center`,
-    //   justifyContent: `space-between`,
-    // }}
-  >
+
+  <header>
     <a href="/">
     <StaticImage
         src="../images/Logo_de_Patrimonio_Nacional.svg.png"
@@ -25,7 +19,10 @@ const Header = ({ siteTitle }) => (
         style={{ marginBottom: `var(--space-3)` }}
       />
       </a>
-      <a href="/profile" role='button' className='aform'>Perfil</a>
+      <div className="headerperfil">
+      <PerfilOpc></PerfilOpc>
+      </div>
+      {/* <a href="/profile" role='button' className='aform'>Perfil</a> */}
   </header>
 )
 

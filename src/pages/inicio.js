@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import "../components/layout.css"
 import TandemButton from "../components/button/tandembutton";
+import Pipiver from "../components/popover";
 
 
 function Inicio(){
@@ -23,6 +24,7 @@ function Inicio(){
       />
       <br></br>
       <p>¡Bienvenido {localStorage.getItem('tandem_nombre')}!</p>
+      <Pipiver></Pipiver>
 
       
     <TandemButton enlace="/crear-qr" >Crear QR</TandemButton>
