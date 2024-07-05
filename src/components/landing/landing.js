@@ -30,7 +30,7 @@ function Landing(){
     
     <br></br>
     
-    <TandemButton enlace="page-infoinstitucional">Información Institucional</TandemButton>
+    {/* <TandemButton enlace="page-infoinstitucional">Información Institucional</TandemButton> */}
     
 
    </div>

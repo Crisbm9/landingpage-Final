@@ -3,11 +3,9 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import "./layout.css"
 import PerfilOpc from "./perfilopc"
-import Pipiver from "./popover"
 
 
 const Header = ({ siteTitle }) => (
-
   <header>
     <a href="/">
     <StaticImage
@@ -21,10 +19,10 @@ const Header = ({ siteTitle }) => (
       />
       </a>
       <div className="headerperfil">
-      {/* <PerfilOpc></PerfilOpc> */}
-      <Pipiver></Pipiver>
+     
+      <PerfilOpc></PerfilOpc>
       </div>
-      {/* <a href="/profile" role='button' className='aform'>Perfil</a> */}
+      
   </header>
 )
 

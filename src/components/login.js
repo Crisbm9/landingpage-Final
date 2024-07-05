@@ -25,7 +25,7 @@ const Login = () => {
         localStorage.setItem('tandem_email', data.user.email);
         localStorage.setItem('tandem_id', data.user.id);
         localStorage.setItem('tandem_role', data.user.role);
-        window.location.href = '/inicio';
+        window.location.href = '/invitado';
       } else {
         setMessage('Credenciales incorrectas');
       }
@@ -56,7 +56,7 @@ const Login = () => {
       />
       <button onClick={handleLogin} className='buform'>Entrar</button>
       <p>{message}</p>
-      <a href="/contrasenia" role='button' className='aform'>¿Olvidaste tu contraseña?</a>
+      {/* <a href="/contrasenia" role='button' className='aform'>¿Olvidaste tu contraseña?</a> */}
       <br></br>
       <a href="/formulario" role='button' className='aform' >Registrarse</a>
     </div>

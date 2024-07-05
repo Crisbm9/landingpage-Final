@@ -3,7 +3,8 @@ import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import "../components/layout.css"
 import TandemButton from "../components/button/tandembutton";
-import Pipiver from "../components/popover";
+import UpdateUser from "../components/editarRole";
+
 
 
 function Inicio(){
@@ -62,7 +63,7 @@ function Inicio(){
   <br></br>
   <TandemButton enlace="#" >Acceder</TandemButton>
   </div>
-  <a href="/" role='button' className='button'>Volver a inicio</a>
+  <UpdateUser></UpdateUser>
 </Layout>
   )
 }
