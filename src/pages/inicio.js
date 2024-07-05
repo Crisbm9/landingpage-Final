@@ -23,8 +23,8 @@ function Inicio(){
         style={{ marginBottom: `var(--space-3)` }}
       />
       <br></br>
-      <p>¡Bienvenido {localStorage.getItem('tandem_nombre')}!</p>
-      <Pipiver></Pipiver>
+      {/* <p>¡Bienvenido {localStorage.getItem('tandem_nombre')}!</p>
+      <Pipiver></Pipiver> */}
 
       
     <TandemButton enlace="/crear-qr" >Crear QR</TandemButton>

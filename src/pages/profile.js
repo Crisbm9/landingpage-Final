@@ -15,7 +15,7 @@ const Profile = () => {
       <a href="/contrasenia" role='button' className='botoncito'>Cambiar contraseña</a>
       <br></br>
       <CerrarSesion></CerrarSesion>
-      <Pipiver></Pipiver>
+      
          </div>
       </Layout>
     </>

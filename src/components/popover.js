@@ -3,6 +3,8 @@ import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { StaticImage } from "gatsby-plugin-image"
+import PerfilOpc from './perfilopc';
+import CerrarSesion from './cerrarsesion';
 
 export default function Pipiver (){
    const [anchorEl, setAnchorEl] = React.useState(null);
@@ -24,7 +26,7 @@ export default function Pipiver (){
              <StaticImage
         src="../images/perfill.png"
         loading="eager"
-        width={150}
+        width={43}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -45,12 +47,14 @@ export default function Pipiver (){
                  <Typography sx={{ p: 2 }}  style={{}}>
            
                  <ul>
-
-                     <li>Nombre: {localStorage.getItem('tandem_nombre')}</li>
-                     <li>Email: {localStorage.getItem('tandem_email')}</li>
+               <li> <PerfilOpc></PerfilOpc></li> 
+               <li><CerrarSesion></CerrarSesion></li>
+                 
+                     {/* <li>Nombre: {localStorage.getItem('tandem_nombre')}</li>
+                     <li>Email: {localStorage.getItem('tandem_email')}</li> */}
                      {/* <li>Delegacion: {localStorage.getItem('tandem_delegacion')}</li> */}
 
-                     <li>role: {localStorage.getItem('tandem_role')}</li>
+                     {/* <li>role: {localStorage.getItem('tandem_role')}</li> */}
                  </ul>
                  </Typography>
              </Popover>
@@ -67,7 +71,7 @@ export default function Pipiver (){
              <StaticImage
         src="../images/perfill.png"
         loading="eager"
-        width={50}
+        width={43}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -88,13 +92,14 @@ export default function Pipiver (){
                  <Typography sx={{ p: 2 }}  style={{}}>
            
                  <ul>
-
-                     <li>ID: {localStorage.getItem('tandem_id')}</li>
+                 <li><PerfilOpc></PerfilOpc></li>
+                 <li><CerrarSesion></CerrarSesion></li>
+                     {/* <li>ID: {localStorage.getItem('tandem_id')}</li>
                      <li>Nombre: {localStorage.getItem('tandem_nombre')}</li>
-                     <li>Email: {localStorage.getItem('tandem_email')}</li>
+                     <li>Email: {localStorage.getItem('tandem_email')}</li> */}
                      {/* <li>Delegacion: {localStorage.getItem('tandem_delegacion')}</li> */}
 
-                     <li>role: {rol}</li>
+                     {/* <li>role: {rol}</li> */}
                  </ul>
                  </Typography>
              </Popover>
@@ -111,7 +116,7 @@ export default function Pipiver (){
              <StaticImage
         src="../images/perfill.png"
         loading="eager"
-        width={50}
+        width={43}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -132,13 +137,15 @@ export default function Pipiver (){
                  <Typography sx={{ p: 2 }}  style={{}}>
            
                  <ul>
-
-                     <li>ID: {localStorage.getItem('tandem_id')}</li>
+                    <li><PerfilOpc></PerfilOpc></li>
+                    <li><CerrarSesion></CerrarSesion></li>
+                    
+                     {/* <li>ID: {localStorage.getItem('tandem_id')}</li>
                      <li>Nombre: {localStorage.getItem('tandem_nombre')}</li>
-                     <li>Email: {localStorage.getItem('tandem_email')}</li>
+                     <li>Email: {localStorage.getItem('tandem_email')}</li> */}
                      {/* <li>Delegacion: {localStorage.getItem('tandem_delegacion')}</li> */}
 
-                     <li>role: {rol}</li>
+                     {/* <li>role: {rol}</li> */}
                  </ul>
                  </Typography>
              </Popover>
