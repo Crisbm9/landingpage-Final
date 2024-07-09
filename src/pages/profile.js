@@ -1,7 +1,7 @@
 import React from "react"
 import CerrarSesion from "../components/cerrarsesion"
 import Layout from "../components/layout"
-import Pipiver from "../components/popover"
+
 
 const Profile = () => {
   return (

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './TablaUsuarios.css'; // Archivo CSS para estilos de la tabla
 import UpdateUser from './editarRole';
+
 function TablaUsuarios({ url }) {
     const [users, setUsers] = useState([]);
     const [message, setMessage] = useState('');
@@ -83,6 +84,7 @@ function TablaUsuarios({ url }) {
                     <p>Delegación: {user.delegacion}</p>
                     <p>Rol: {user.role}</p>
                     <button onClick={() => handleEditUser(user)}>Cambiar Role</button>
+                    
                     {/* <button onClick={() => handleDeleteUser(user.id)}>Eliminar</button>
                     <div className="change-role">
                         <select

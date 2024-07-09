@@ -9,7 +9,7 @@ export default function Invitado (){
     return(
     <Layout>
       <div className="qrinicio">
-      <p><StaticImage
+      {/* <p><StaticImage
         src="../images/perfill.png"
         loading="eager"
         width={80}
@@ -17,7 +17,7 @@ export default function Invitado (){
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
-      /></p>
+      /></p> */}
       <h1>¡Bienvenido {localStorage.getItem('tandem_nombre')}!</h1>
     <ul>
       <li><a href="/profile" role='button' className="">Perfil</a></li>
@@ -31,7 +31,7 @@ if(rol=='employee'){
   return(
     <Layout>
       <div className="qrinicio">
-      <p><StaticImage
+      {/* <p><StaticImage
         src="../images/perfill.png"
         loading="eager"
         width={80}
@@ -39,7 +39,7 @@ if(rol=='employee'){
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
-      /></p>
+      /></p> */}
       <h1>¡Bienvenido {localStorage.getItem('tandem_nombre')}!</h1>
     <ul>
     <li><a href="/profile" role='button' className="">Perfil</a></li>
@@ -55,7 +55,7 @@ if(rol=='admin'){
       <Layout>
         <div className="qrinicio">
         
-        <p><StaticImage
+        {/* <p><StaticImage
         src="../images/perfill.png"
         loading="eager"
         width={80}
@@ -63,12 +63,13 @@ if(rol=='admin'){
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
-      /></p>
+      /></p> */}
       <h1>¡Bienvenido {localStorage.getItem('tandem_nombre')}!</h1>
       <ul>
       <li><a href="/profile" role='button' className="">Perfil</a></li>
       <li><a href="/page-infoinstitucional" role='button' className="">Información Institucional</a></li>
       <li><a href="/crear-qr" role='button' className="">Crear QR</a></li>
+      <li><a href="/list-qr" role='button' className="">Listado de qr</a></li>
       <li><a href="/admin-user" role='button' className="">Administrar empleados</a></li>
       </ul>
       </div>

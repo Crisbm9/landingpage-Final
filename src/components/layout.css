@@ -427,3 +427,14 @@ input[type="radio"] {
 .headerperfil{
   float: right;
 }
+
+/* ////////////////////// */
+td {
+  padding: 10px; /* Add padding around cell content */
+  border: 1px solid #ddd; /* Add a thin border to each cell */
+}
+.tablaqr{
+  background-color:#a99898 ;
+
+}
+  
