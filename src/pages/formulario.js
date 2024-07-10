@@ -23,7 +23,7 @@ const Register = () => {
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
-      <h2>Registro</h2>
+      
          
         <Registro></Registro>
         </div>

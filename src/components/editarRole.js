@@ -1,8 +1,9 @@
+import { RollerShades } from '@mui/icons-material';
 import React, { useState } from 'react';
 
-const UpdateUser = () => {
-  const [email, setEmail] = useState('');
-  const [role, setRole] = useState('');
+const UpdateUser = ({emaill, rolee}) => {
+  const [email, setEmail] = useState(emaill);
+  const [role, setRole] = useState(rolee);
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (e) => {

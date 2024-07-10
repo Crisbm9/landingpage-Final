@@ -1,17 +1,17 @@
+
 import React, { useState } from 'react';
 
 const Registro = () => {
     const [nombre, setNombre] = useState('');
+    const [departamento, setDepartamento] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [departamento, setDepartamento]= useState('');
     const [message, setMessage] = useState('');
 
-    const hadleNombre=(e) => setNombre(e.target.value);
-    const hadleEmail=(e) => setEmail(e.target.value);
-    const hadlePassword=(e) => setPassword(e.target.value);
-    const hadleDepartamento=(e) => setDepartamento(e.target.value);
-
+    const handleNombre = (e) => setNombre(e.target.value);
+    const handleDepartamento = (e) => setDepartamento(e.target.value);
+    const handleEmail = (e) => setEmail(e.target.value);
+    const handlePassword = (e) => setPassword(e.target.value);
 
     const handleRegistro = async () => {
         try {
@@ -21,15 +21,20 @@ const Registro = () => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    "nombre": nombre,
-                    "departamento": departamento,
-                    "email": email,
-                   "password": password
+                    nombre,
+                    departamento,
+                    email,
+                    password
                 })
             });
             const data = await response.json();
-            window.location.href = '/inicio';
-            setMessage(data.message);
+            if (response.ok) {
+                setMessage(data.message);
+                
+                // window.location.href = '/page-2';
+            } else {
+                setMessage(data.message);
+            }
         } catch (error) {
             console.error('Error registrando usuario', error);
             setMessage('Error en el registro');
@@ -38,38 +43,38 @@ const Registro = () => {
 
     return (
         <div>
-          
-          <label htmlFor='nombre'>Nombre:</label>
+            <h2>Registro de Usuario</h2>
+            <label htmlFor='nombre'>Nombre:</label>
             <input
                 type="text"
                 placeholder="Introduce tu nombre"
                 id='nombre'
                 value={nombre}
-                onChange={hadleNombre}
+                onChange={handleNombre}
             />
-             <label htmlFor='departamento'>Departamento:</label>
+            <label htmlFor='departamento'>Departamento:</label>
             <input
                 type="text"
                 placeholder="Introduce tu departamento"
                 id='departamento'
                 value={departamento}
-                onChange={hadleDepartamento}
+                onChange={handleDepartamento}
             />
-          <label htmlFor='email'>Email:</label>
+            <label htmlFor='email'>Email:</label>
             <input
-                type="text"
+                type="email"
                 placeholder="Introduce tu email"
                 id='email'
                 value={email}
-                onChange={hadleEmail}
+                onChange={handleEmail}
             />
-          <label htmlFor='password'>Contraseña:</label>
+            <label htmlFor='password'>Contraseña:</label>
             <input
-                type="text"
+                type="password"
                 placeholder="Introduce tu Contraseña"
                 id='password'
                 value={password}
-                onChange={hadlePassword}
+                onChange={handlePassword}
             />
             <button onClick={handleRegistro}>Registro</button>
             {message && <p>{message}</p>}
