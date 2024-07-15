@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import { StaticImage } from "gatsby-plugin-image"
+
 
 
 export default function Invitado (){
@@ -9,15 +9,7 @@ export default function Invitado (){
     return(
     <Layout>
       <div className="qrinicio">
-      {/* <p><StaticImage
-        src="../images/perfill.png"
-        loading="eager"
-        width={80}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      /></p> */}
+      
       <h1>¡Bienvenido {localStorage.getItem('tandem_nombre')}!</h1>
     <ul>
       <li><a href="/profile" role='button' className="">Perfil</a></li>
@@ -31,15 +23,7 @@ if(rol=='employee'){
   return(
     <Layout>
       <div className="qrinicio">
-      {/* <p><StaticImage
-        src="../images/perfill.png"
-        loading="eager"
-        width={80}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      /></p> */}
+     
       <h1>¡Bienvenido {localStorage.getItem('tandem_nombre')}!</h1>
     <ul>
     <li><a href="/profile" role='button' className="">Perfil</a></li>
@@ -55,15 +39,7 @@ if(rol=='admin'){
       <Layout>
         <div className="qrinicio">
         
-        {/* <p><StaticImage
-        src="../images/perfill.png"
-        loading="eager"
-        width={80}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      /></p> */}
+       
       <h1>¡Bienvenido {localStorage.getItem('tandem_nombre')}!</h1>
       <ul>
       <li><a href="/profile" role='button' className="">Perfil</a></li>

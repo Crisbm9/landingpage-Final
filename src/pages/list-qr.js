@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import QRCode from 'qrcode.react';
 import Layout from '../components/layout';
+import ModalTandem from '../components/modaltandem';
+import EliminarQR from '../components/deleteqr';
 
 const QrCodeList = () => {
   const [qrCodes, setQrCodes] = useState([]);
@@ -48,6 +50,7 @@ const QrCodeList = () => {
             <th>Descripción</th>
             <th>Fecha Creación</th>
             <th>ID Usuario</th>
+            <th></th>
 
           </tr>
         </thead>
@@ -63,6 +66,10 @@ const QrCodeList = () => {
               <td>{qrCode.qr_description}</td>
               <td>{qrCode.qr_created_at}</td>
               <td>{qrCode.user_id}</td>
+              <td><ModalTandem
+                  boton="Borrar"
+                  text={<EliminarQR qr={qrCode.qr_nombre_ref}></EliminarQR>}
+                /></td>
 
             </tr>
           ))}

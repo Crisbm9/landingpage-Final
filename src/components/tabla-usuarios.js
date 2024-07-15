@@ -59,7 +59,9 @@ const Usuarios = () => {
                  <ModalTandem
                   boton="Borrar"
                   text={<DeleteUserButton emaili={user.email}></DeleteUserButton>}
-                /></td>
+                />
+                
+                </td>
             </tr>
 
           ))}
