@@ -7,12 +7,10 @@ import QRCode from 'qrcode.react';
 import { toPng, toJpeg, toSvg } from 'html-to-image';
 import download from "downloadjs";
 import CenteredTabs from "../components/tabs";
-import Modall from "../components/modal";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import MapaConMarcador from "../components/mapa";
 import { FaDownload, FaEdit, FaSave } from 'react-icons/fa';
 import SaveDb from "../components/savedb";
 
