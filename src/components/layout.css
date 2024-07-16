@@ -437,4 +437,81 @@ td {
   background-color:#a99898 ;
 
 }
-  
+
+/* ////////////////////////////////////// */
+table {
+  width: 100%; /* Ancho de la tabla */
+  border-collapse: collapse; /* Une los bordes de las celdas */
+  margin: 20px auto; /* Margen alrededor de la tabla */
+}
+
+caption {
+  text-align: center; /* Alinea el título de la tabla al centro */
+  font-weight: bold; /* Hace que el título de la tabla sea más grueso */
+}
+
+th, td {
+  padding: 8px; /* Espacio de relleno dentro de las celdas */
+  border: 1px solid #ddd; /* Borde gris claro para las celdas */
+}
+
+th {
+  background-color: #f0f0f0; /* Color de fondo gris claro para las celdas de encabezado */
+}
+
+tr:nth-child(odd) {
+  background-color: #fff; /* Color de fondo blanco para filas impares */
+}
+/* ////////////card//////////////7 */
+.card {
+  width: 300px; /* Ajusta el ancho según tus necesidades */
+  margin: 20px auto; /* Centra la tarjeta horizontalmente y agrega margen */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.card-header {
+  padding: 15px;
+  background-color: #f0f0f0; /* Color de fondo del encabezado */
+  border-bottom: 1px solid #ddd;
+}
+
+.card-header h2 {
+  margin: 0; /* Elimina el margen superior por defecto */
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-footer {
+  padding: 10px;
+  background-color: #fff; /* Color de fondo del pie de página */
+  border-top: 1px solid #ddd;
+  text-align: right; /* Alinea los botones a la derecha */
+}
+
+.card-footer a {
+  margin-left: 5px; /* Espacio entre botones */
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #333; /* Color de fondo al pasar el mouse sobre el botón */
+}

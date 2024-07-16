@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 
 const DeleteUserButton = ({emaili}) => {
-  const [email, setEmail] = useState(emaili);
+  const [emaila, setEmaila] = useState(emaili);
+  const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const handleDeleteUser = async () => {
@@ -35,9 +36,11 @@ const DeleteUserButton = ({emaili}) => {
   return (
     <div>
       <h2>Eliminar Usuario</h2>
+      <p><b>{emaila}</b></p>
+      <p>Introduzca email de usuario a borrar:</p>
       <input
         type="text"
-        placeholder="Correo electrónico del usuario"
+        placeholder="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />

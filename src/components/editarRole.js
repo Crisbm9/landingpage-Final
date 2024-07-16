@@ -26,15 +26,21 @@ const UpdateUser = ({emaill, rolee}) => {
       <h2>Actualizar Rol de Usuario</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>
+          <p>{email}</p>
+          {/* <label>
             Email:
             <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} required />
-          </label>
+          </label> */}
         </div>
         <div>
           <label>
             Role:
-            <input type="text" value={role} onChange={(e) => setRole(e.target.value)} required />
+            {/* <input type="text" value={role} onChange={(e) => setRole(e.target.value)} required /> */}
+            <select id="roleSelect" value={role} onChange={(e) => setRole(e.target.value)} required>
+            <option value="admin">Admin</option>
+            <option value="employee">Employee</option>
+            <option value="guest">Guest</option>
+            </select>
           </label>
         </div>
         <button type="submit">Actualizar Rol</button>

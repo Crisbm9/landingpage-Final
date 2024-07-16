@@ -5,7 +5,6 @@ function AdminUsuarios(){
 return(
     <>
     <Layout>
-    <h1>Lista de usuarios</h1>
     <Usuarios></Usuarios>
     </Layout>
     </>

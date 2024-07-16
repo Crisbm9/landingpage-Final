@@ -205,7 +205,6 @@ function Crearqr() {
 
         </div>
       </div>
-      <a href="/" role='button' className='button'>Volver a inicio</a>
       
     
     </Layout>

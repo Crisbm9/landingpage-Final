@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 const SaveDb= ({data,nref,desc})=>{
 const [mensaje, setMensaje]=useState(false)
 const [respuesta, setRespuesta]=useState('')
-const userId = localStorage.getItem('tandem_id')
+
 
     const saveQr= async () => {
        
@@ -18,7 +18,7 @@ const userId = localStorage.getItem('tandem_id')
                     "data": data,
                     "nombre_ref": nref,
                     "description": desc,
-                    "created_by": userId
+                    "created_by": localStorage.getItem('tandem_id')
                 })
             });
             const respuesta=await response.json();

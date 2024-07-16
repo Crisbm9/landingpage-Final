@@ -35,10 +35,11 @@ const ModificarUsuario = ({ initialNombre,  initialEmail, initialDepartamento })
       <h2>Actualizar Datos de Usuario</h2>
       <form onSubmit={manejarUsuario}>
          <div>
-          <label>
+          <p>{email}</p>
+          {/* <label>
             Email:
             <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} required />
-          </label>
+          </label> */}
         </div> 
         <div>
           <label>

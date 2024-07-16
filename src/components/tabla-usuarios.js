@@ -30,10 +30,12 @@ const Usuarios = () => {
 
   return (
     <div className="tablaqr">
+      <h1>Lista de Usuarios</h1>
       <table>
         <thead>
           <tr>
             <th>Nombre</th>
+            <th>Id</th>
             <th>Email</th>
             <th>Departamento</th>
             <th>Role</th>
@@ -44,6 +46,7 @@ const Usuarios = () => {
           {users.map((user) => (
             <tr key={user.id}>
               <td>{user.nombre}</td>
+              <td>{user.id}</td>
               <td>{user.email}</td>
               <td>{user.departamento}</td>
               <td>{user.role}</td>
