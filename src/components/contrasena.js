@@ -67,7 +67,7 @@ const ForgotPassword = () => {
             </li>
           </ul>
           {message && <p className="message">{message}</p>}
-          <button type="submit">Cambiar Contraseña</button>
+          <button type="submit" className='button-collapse'>Cambiar Contraseña</button>
         </form>
       </div>
     </div>

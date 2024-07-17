@@ -8,7 +8,7 @@ const CerrarSesion = ()=>{
     }
     return (
         <>
-        <button onClick={handleCerrarSesion}>Cerrar sesion</button>
+        <button onClick={handleCerrarSesion} className='button-collapse'>Cerrar sesion</button>
         </>
     )
 }

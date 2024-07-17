@@ -48,8 +48,8 @@ export default function Pipiver (){
                  <Typography sx={{ p: 2 }}  style={{}}>
            
         <ul>
-        <li><a href="/profile" role='button' className=''>Perfil</a></li>
-        <li><a href="/invitado" role='button' className=''>Inicio</a></li>
+        <li><a href="/profile" role='button' className='aform'>Perfil</a></li>
+        <li><a href="/invitado" role='button' className='aform'>Inicio</a></li>
         <li><CerrarSesion></CerrarSesion></li>
         </ul>
                 
@@ -89,8 +89,8 @@ export default function Pipiver (){
                  <Typography sx={{ p: 2 }}  style={{}}>
            
         <ul>
-        <li><a href="/profile" role='button' className=''>Perfil</a></li>
-        <li><a href="/invitado" role='button' className=''>Inicio</a></li>
+        <li><a href="/profile" role='button' className='aform'>Perfil</a></li>
+        <li><a href="/invitado" role='button' className='aform'>Inicio</a></li>
         <li><CerrarSesion></CerrarSesion></li>
         </ul>
                  
@@ -130,8 +130,8 @@ export default function Pipiver (){
                  <Typography sx={{ p: 2 }}  style={{}}>
            
         <ul>
-        <li><a href="/profile" role='button' className=''>Perfil</a></li>
-        <li><a href="/invitado" role='button' className=''>Inicio</a></li>
+        <li><a href="/profile" role='button' className='aform'>Perfil</a></li>
+        <li><a href="/invitado" role='button' className='aform'>Inicio</a></li>
         <li><CerrarSesion></CerrarSesion></li>
         </ul>
                  </Typography>

@@ -149,7 +149,7 @@ function Crearqr() {
                 </SaveDb>
     </div>   
 
-    <Button onClick={handleOpen} className='button-collapse'>Descargar <FaDownload style={{ color: '#43381b' }}/></Button>
+    <Button onClick={handleOpen} className='button-collapse'>Descargar <FaDownload/></Button>
           
           <Modal
             open={open}
