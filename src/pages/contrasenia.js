@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 const contrasenia= ()=>{
 return(
   <Layout>
-    <div className="qr-contenido">
+    <div className="qrinicio">
   <ForgotPassword></ForgotPassword>
     </div>
   </Layout>

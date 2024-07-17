@@ -56,9 +56,11 @@ export default function CenteredTabs({ inputValue, setInputValue, latLng, setLat
   return (
   
     <Box sx={{ width: '100%', bg: 'linear-gradient(0deg, rgba(98,95,95,1) 0%, rgba(101,83,77,1) 5%, rgba(175,172,172,1) 58%, rgba(207,204,204,1) 75%);' }}>
-      <Tabs value={value} onChange={handleChange} centered textColor="secondary"
-  indicatorColor="secondary"
+      <Tabs value={value} onChange={handleChange} 
+      centered 
   aria-label="secondary tabs example">
+    {/* textColor="secondary"
+  indicatorColor="secondary" */}
         <Tab label="URL" />
         <Tab label="Texto" />
         <Tab label="Lugar" />

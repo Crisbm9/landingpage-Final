@@ -94,7 +94,7 @@ function Crearqr() {
   const handleClose = () => setOpen(false);
   return (
     <Layout>
-      <div className="qr-generador" style={containerStyle}>
+      <div className="qrinicio" >
         <h1>GENERADOR DE QR</h1>
         <Collapse2 />
 

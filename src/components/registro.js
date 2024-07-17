@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 const Registro = () => {
@@ -83,3 +82,4 @@ const Registro = () => {
 };
 
 export default Registro;
+

@@ -160,7 +160,7 @@ const Info = () => {
         </p>
         <Accordion items={accordionItems} />
       </div>
-      <TandemButton enlace="/">volver a inicio</TandemButton>
+      
     </Layout>
   );
 };

@@ -1,6 +1,6 @@
 
 .layoute{ 
-  background-color: antiquewhite;
+  background-color: rgba(215, 215, 250, 0.816);
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
   align-items: center;
   text-align: center;
@@ -37,8 +37,8 @@
   margin: 0; 
   padding: .5em; 
   border-radius: 8px; 
-  background-color:antiquewhite; 
-  color: #43381b; 
+  background-color: rgb(49, 49, 85);
+  color: #cdcbc6; 
   border: 3px solid #43381b;
   cursor: pointer;
   transition: background-color 0.3s ease; 
