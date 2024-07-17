@@ -33,7 +33,7 @@ const Usuarios = () => {
     <div>
       <h1>Lista de Usuarios</h1>
       <ModalTandem
-        boton="Registro"
+        boton="+ Registrar nuevo usuario"
         text={<Registro />}
       />
       
