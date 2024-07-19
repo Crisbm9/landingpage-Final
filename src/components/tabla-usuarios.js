@@ -6,9 +6,10 @@ import DeleteUserButton from './delete';
 import Registro from './registro';
 import { Card, CardContent, CardActions, Typography, Button } from '@mui/material';
 
-const Usuarios = () => {
+const Usuarios = (url,) => {
   const [users, setUsers] = useState([]);
   const [message, setMessage] = useState('');
+  const [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -27,7 +28,11 @@ const Usuarios = () => {
     };
 
     fetchUsers();
-  }, []);
+  }, [url, refresh]);
+
+  const handleUserUpdated = () => {
+    setRefresh(!refresh); // Cambia el estado de refresh para desencadenar useEffect
+  };
 
   return (
     <div>
@@ -50,7 +55,7 @@ const Usuarios = () => {
             <CardActions>
               <ModalTandem
                 boton="Modificar"
-                text={<ModificarUsuario initialEmail={user.email} initialNombre={user.nombre} initialDepartamento={user.departamento} />}
+                text={<ModificarUsuario initialEmail={user.email} initialNombre={user.nombre} initialDepartamento={user.departamento} onUserUpdated={handleUserUpdated} />}
               />
               <ModalTandem
                 boton="Cambiar rol"

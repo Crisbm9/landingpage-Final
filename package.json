@@ -23,7 +23,7 @@
     "react-leaflet": "^4.2.1",
     "react-qr-code": "^2.0.14",
     "react-share": "^5.1.0",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.12"
   },
   "devDependencies": {
     "prettier": "^2.8.8"

@@ -31,9 +31,6 @@ export default function ModalTandem({text,boton}) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          {/* <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography> */}
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             {text}
           </Typography>

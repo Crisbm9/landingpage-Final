@@ -1,6 +1,6 @@
 
 
-import * as React from "react"
+import React,{ useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -9,8 +9,19 @@ import Footer from "./footer"
 
 import "./layout.css"
 
+import Darkmode from "./darkmode"
 
-const Layout = ({ children }) => {
+const Layout = ({ children }) => { 
+const [darkMode,setDarkmode]=useState(() => {
+  const savedTheme = localStorage.getItem('darkMode');
+  return savedTheme !== null ? JSON.parse(savedTheme) : false;  
+})
+
+localStorage.setItem('darkMode', JSON.stringify(darkMode));
+
+const handlerDarkMode=()=>{
+  setDarkmode(!darkMode)
+}
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,7 +35,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
+      <button onClick={handlerDarkMode}>
+  {darkMode?"claro":"oscuro"}
+</button>
+<Darkmode dark={darkMode}>
+<div
         style={{
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
@@ -34,6 +49,8 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         
       </div>
+</Darkmode>
+      
       <Footer></Footer>
     </>
   )

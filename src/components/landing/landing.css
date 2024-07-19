@@ -7,7 +7,7 @@
 }
 
 .botones{
-  background-image: url('../../images/Fuente.jpg');
+  background-image: url('../../images/nuestrahistoria.jpg');
   text-align: center;
   padding: 1em;
   height: 400px;
@@ -39,7 +39,7 @@
   border-radius: 8px; 
   background-color: rgb(49, 49, 85);
   color: #cdcbc6; 
-  border: 3px solid #43381b;
+  border: 3px solid #282110;
   cursor: pointer;
   transition: background-color 0.3s ease; 
   box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
@@ -49,6 +49,6 @@
 
 } 
 .button:hover{
-  background-color: #69572B;
-  color: white;
+  background-color: #E3E2D6;
+  color: #282110;
 }

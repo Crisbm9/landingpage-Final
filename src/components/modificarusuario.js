@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ModificarUsuario = ({ initialNombre,  initialEmail, initialDepartamento }) => {
+const ModificarUsuario = ({ initialNombre,  initialEmail, initialDepartamento, onUserUpdated }) => {
   const [nombre, setNombre] = useState(initialNombre);
   const [email, setEmail] = useState(initialEmail);
   const [departamento, setDepartamento] = useState(initialDepartamento);
@@ -20,10 +20,12 @@ const ModificarUsuario = ({ initialNombre,  initialEmail, initialDepartamento })
 
       if (!response.ok) {
         throw new Error(`Error: ${response.status} ${response.statusText}`);
+
       }
 
       const data = await response.json();
       setMessage(data.message);
+      onUserUpdated();
     } catch (error) {
       console.error('Error registrando usuario:', error);
       setMessage('Error en el registro');
