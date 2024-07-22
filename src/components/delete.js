@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 
-const DeleteUserButton = ({emaili}) => {
+const DeleteUserButton = ({emaili, onUserUpdated}) => {
   const [emaila, setEmaila] = useState(emaili);
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -25,6 +25,7 @@ const DeleteUserButton = ({emaili}) => {
 
       if (response.ok) {
         setMessage(data.message);
+        onUserUpdated();
       } else {
         setMessage(data.message);
       }

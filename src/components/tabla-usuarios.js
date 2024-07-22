@@ -10,6 +10,9 @@ const Usuarios = (url,) => {
   const [users, setUsers] = useState([]);
   const [message, setMessage] = useState('');
   const [refresh, setRefresh] = useState(false);
+  const [q, setQ] = useState("");
+  const [searchParam] = useState(["nombre"]);
+
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -34,17 +37,55 @@ const Usuarios = (url,) => {
     setRefresh(!refresh); // Cambia el estado de refresh para desencadenar useEffect
   };
 
+  function search(items) {
+    return items.filter((item) => {
+      return searchParam.some((param) => {
+        return (
+          item[param] && // Verifica que el campo existe
+          item[param]
+            .toString()
+            .toLowerCase()
+            .indexOf(q.toLowerCase()) > -1
+        );
+      });
+    });
+  }
+
   return (
     <div>
       <h1>Lista de Usuarios</h1>
-      <ModalTandem
+      <div className="search-wrapper">
+                <label htmlFor="search-form">
+                  <span className="sr-only">Buscar por nombre:</span>
+                  <input
+                    type="search"
+                    name="search-form"
+                    id="search-form"
+                    className="search-input"
+                    placeholder="Buscar por nombre"
+                    value={q}
+                    onChange={(e) => setQ(e.target.value)}
+                    style={{ width: '400px', height: '40px', fontSize: '16px', padding: '10px' }}
+                  />
+                </label>
+              </div>
+              <br></br>
+              <ModalTandem
         boton="+ Registrar nuevo usuario"
         text={<Registro />}
       />
-      
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-        {users.map((user) => (
-          <Card key={user.id} style={{ width: '300px' }}>
+      {search(users).map((user) => (
+        // {users.map((user) => (
+          <Card key={user.id} 
+          sx={{
+            width: '300px',
+            transition: 'transform 0.3s, background-color 0.3s',
+            '&:hover': {
+              backgroundColor: '#C2EBF5',
+              transform: 'scale(1.05)',
+            },
+          }}>
             <CardContent>
               <Typography variant="h6">{user.nombre}</Typography>
               <Typography variant="body2">Id: {user.id}</Typography>
@@ -59,11 +100,11 @@ const Usuarios = (url,) => {
               />
               <ModalTandem
                 boton="Cambiar rol"
-                text={<UpdateUser emaill={user.email} rolee={user.role} />}
+                text={<UpdateUser emaill={user.email} rolee={user.role} onUserUpdated={handleUserUpdated} />}
               />
               <ModalTandem
                 boton="Borrar"
-                text={<DeleteUserButton emaili={user.email} />}
+                text={<DeleteUserButton emaili={user.email} onUserUpdated={handleUserUpdated} />}
               />
             </CardActions>
           </Card>
@@ -74,87 +115,3 @@ const Usuarios = (url,) => {
 };
 
 export default Usuarios;
-
-// import React, { useEffect, useState } from 'react';
-// import UpdateUser from './editarRole';
-// import ModificarUsuario from './modificarusuario';
-// import ModalTandem from './modaltandem';
-// import DeleteUserButton from './delete';
-// import Registro from './registro';
-
-// const Usuarios = () => {
-//   const [users, setUsers] = useState([]);
-//   const [message, setMessage] = useState('');
-
-//   useEffect(() => {
-//     const fetchUsers = async () => {
-//       try {
-//         const response = await fetch('http://localhost/api-qr-tandem/v1/list-users.php ');
-//         if (!response.ok) {
-//           throw new Error('Error al cargar los usuarios');
-//         }
-//         const data = await response.json();
-//         setUsers(data.users);
-//         setMessage(data.message);
-//       } catch (error) {
-//         console.error('Error fetching users', error);
-//         setMessage('Error al cargar los usuarios');
-//       }
-//     };
-
-//     fetchUsers();
-//   }, []);
-
-//   return (
-//     <div className="tablaqr">
-//       <h1>Lista de Usuarios</h1>
-//       <ModalTandem
-//                   boton="Registro"
-//                   text={<Registro></Registro>}
-//                 />
-//       <table>
-//         <thead>
-//           <tr>
-//             <th>Nombre</th>
-//             <th>Id</th>
-//             <th>Email</th>
-//             <th>Departamento</th>
-//             <th>Role</th>
-//             <th></th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           {users.map((user) => (
-//             <tr key={user.id}>
-//               <td>{user.nombre}</td>
-//               <td>{user.id}</td>
-//               <td>{user.email}</td>
-//               <td>{user.departamento}</td>
-//               <td>{user.role}</td>
-//               <td>
-//               <ModalTandem
-//                   boton="Modificar"
-//                   text={<ModificarUsuario initialEmail={user.email} initialNombre={user.nombre} initialDepartamento={user.departamento} />}
-//                 />
-//                 <ModalTandem
-//                   boton="Cambiar rol"
-//                   text={<UpdateUser emaill={user.email} rolee={user.role}></UpdateUser>}
-//                 />
-//                  <ModalTandem
-//                   boton="Borrar"
-//                   text={<DeleteUserButton emaili={user.email}></DeleteUserButton>}
-//                 />
-                
-//                 </td>
-//             </tr>
-
-//           ))}
-//         </tbody>
-//       </table>
-     
-      
-//     </div>
-//   );
-// };
-
-// export default Usuarios;

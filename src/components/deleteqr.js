@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const EliminarQR = ({qr}) => {
+const EliminarQR = ({qr, onUserUpdated}) => {
   const [nombreRef, setNombreRef] = useState(qr);
   const [message, setMessage] = useState('');
 
@@ -18,6 +18,7 @@ const EliminarQR = ({qr}) => {
 
       const data = await response.json();
       setMessage(data.message);
+      onUserUpdated();
     } catch (error) {
       console.error('Error eliminando el código QR', error);
       setMessage('Error en la eliminación');

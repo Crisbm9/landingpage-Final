@@ -1,6 +1,9 @@
 import React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from 'gatsby';
+import { Button } from '@mui/material';
+
 
 
 export default function Invitado (){
@@ -93,16 +96,23 @@ if(rol=='admin'){
   </div>
   <div class="columna">
  
-    <ul>
+    <ul className="listaa">
       <li><a href="/profile" role='button' className="">Perfil</a></li>
       <li><a href="/page-infoinstitucional" role='button' className="">Información Institucional</a></li>
       <li><a href="/crear-qr" role='button' className="">Crear QR</a></li>
-      <li><a href="/list-qr" role='button' className="">Listado de qr</a></li>
+      <li><a href="/list-qr" role='button' className="">Listado de QR</a></li>
       <li><a href="/admin-user" role='button' className="">Administrar empleados</a></li>
       </ul>
-    </div>
+    
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/your-target-page"
+    >
+      Ir a la Página
+    </Button></div>
 </div>
-
 </div>
       
       </Layout>

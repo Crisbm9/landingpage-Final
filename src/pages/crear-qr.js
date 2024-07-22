@@ -127,16 +127,13 @@ function Crearqr() {
           />
         </div>
         <div className="modales">
-          {/* <Modall></Modall> */}
-        {/* <SaveDb data={inputValue} nref="manolita" desc="paca" userId="1"></SaveDb> */}
-          
         
   <div className="white gr">
     <h3><FaSave></FaSave>Guardar</h3>       
   <ul><label for="nombre">Nombre:</label>
   <input type="text" id="nombre" name="nombre" value={nombre} onChange={handleNombreChange}/>
- </ul>
- <ul>
+  </ul>
+  <ul>
   <label for="descripcion">Descripción:</label>
   <input type="text" id="descripcion" name="descripcion" value={descripcion} onChange={handleDescripcionChange} />
     </ul>            

@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import "../components/layout.css";
 import Accordion from "../components/accordion";
-import TandemButton from "../components/button/tandembutton";
+
 const Info = () => {
   const accordionItems = [
     {

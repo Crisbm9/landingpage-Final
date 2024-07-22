@@ -2,14 +2,11 @@
 
 import React,{ useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
-
 import Footer from "./footer"
-
 import "./layout.css"
-
 import Darkmode from "./darkmode"
+import { FiSun, FiMoon } from "react-icons/fi";
 
 const Layout = ({ children }) => { 
 const [darkMode,setDarkmode]=useState(() => {
@@ -35,8 +32,8 @@ const handlerDarkMode=()=>{
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <button onClick={handlerDarkMode}>
-  {darkMode?"claro":"oscuro"}
+      <button onClick={handlerDarkMode} className="sol">
+      {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
 </button>
 <Darkmode dark={darkMode}>
 <div

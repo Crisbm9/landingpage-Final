@@ -58,7 +58,7 @@ const Login = () => {
       <p>{message}</p>
       {/* <a href="/contrasenia" role='button' className='aform'>¿Olvidaste tu contraseña?</a> */}
       <br></br>
-      <a href="/formulario" role='button' className='aform' >Registrarse</a>
+      <a href="/formulario" role='button' className='aformi' >Registrarse</a>
     </div>
   );
 };

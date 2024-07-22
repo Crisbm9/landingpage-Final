@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 
-const UpdateUser = ({emaill, rolee}) => {
+const UpdateUser = ({emaill, rolee, onUserUpdated}) => {
   const [email, setEmail] = useState(emaill);
   const [role, setRole] = useState(rolee);
   const [message, setMessage] = useState('');
@@ -19,6 +19,7 @@ const UpdateUser = ({emaill, rolee}) => {
 
     const data = await response.json();
     setMessage(data.message);
+    onUserUpdated();
   };
 
   return (
@@ -27,10 +28,6 @@ const UpdateUser = ({emaill, rolee}) => {
       <form onSubmit={handleSubmit}>
         <div>
           <p>{email}</p>
-          {/* <label>
-            Email:
-            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} required />
-          </label> */}
         </div>
         <div>
           <label>

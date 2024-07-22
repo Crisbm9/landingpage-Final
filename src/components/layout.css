@@ -232,7 +232,7 @@ pre tt:after {
 }
 /* ------------------------------------------------------------------------ */
 .infoinst{
-  background: linear-gradient(0deg, rgba(29,39,64,1) 0%, rgba(56,66,89,1) 10%, rgba(56,66,89,1) 24%, rgba(155,166,184,1) 57%, rgba(195,210,227,1) 81%, rgba(214,220,227,1) 100%);
+  background-color: #efd092a5;
   padding: 2em;
 }
 .qrinicio{
@@ -326,7 +326,8 @@ header{
   color: white;
 }
 .accordion-header{
-  background-color: #97814a;
+  background-color: #21375ed7;
+  color: antiquewhite;
   
 }
 .qr-generador{
@@ -537,4 +538,39 @@ a{
 
 .columna {
   flex: 1; /* Las columnas ocupan el mismo espacio */
+}
+
+.sol{
+  background-color: #efd09282;
+  border-radius: 20%;
+}
+
+.card:hover{
+background-color: #007bff;
+}
+
+.listaa li{
+  /* background-color: #7ba5ae; */
+  background-color: #efd09282;;
+  padding: 0.5em;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.listaa li:hover{
+  background-color: #010c184e;
+  color: white;
+}
+.listaa li a{
+  text-decoration: none;
+  color: black;
+}
+
+
+.divi{
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 8px;
+    border: 3px solid #43381b;
+    background-color: #efd09282;
+    box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
 }

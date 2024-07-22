@@ -14,7 +14,7 @@
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   border: 3px solid #43381b;
   /* background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(80,80,80,0.9360994397759104) 28%, rgba(108,108,108,1) 38%, rgba(207,204,204,1) 72%); */
-  background: linear-gradient(0deg, rgba(29,39,64,1) 0%, rgba(56,66,89,1) 10%, rgba(56,66,89,1) 24%, rgba(155,166,184,1) 57%, rgba(195,210,227,1) 81%, rgba(214,220,227,1) 100%);
+  background-color: #efd09282;
   box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
   margin-right: 30%;
 
@@ -70,4 +70,7 @@ label{
 
 .aform{
   color: #15316a!important;
+}
+.aformi{
+  color: #050c1b;
 }
