@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
     <StaticImage
         src="../images/Logo_de_Patrimonio_Nacional.svg.png"
         loading="eager"
-        width={150}
+        width={200}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
       <div className="headerperfil">
      
       <PerfilOpc></PerfilOpc>
-      </div>
+      </div> 
       
   </header>
 )

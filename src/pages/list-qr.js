@@ -50,9 +50,9 @@ const QrCodeList = (url) => {
     });
   }
 
-  if (loading) {
-    return <p>Cargando...</p>;
-  }
+  // if (loading) {
+  //   return <p>Cargando...</p>;
+  // }
 
   if (error) {
     return <p>Error al cargar los datos: {error.message}</p>;

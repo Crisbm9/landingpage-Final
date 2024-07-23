@@ -98,7 +98,7 @@ function Crearqr() {
         <h1>GENERADOR DE QR</h1>
         <Collapse2 />
 
-        <div className="white">
+        <div className="divi">
           <CenteredTabs 
             inputValue={inputValue} 
             setInputValue={setInputValue} 
@@ -107,7 +107,7 @@ function Crearqr() {
             setInputType={setInputType}
           /> 
           </div>
-          <div  className="white">
+          <div  className="divi">
             <h3>Tu QR generado:</h3>
             <div ref={qrRef}>
             <QRCode
@@ -118,7 +118,7 @@ function Crearqr() {
             </div>
         </div>
 
-        <div className="white">
+        <div className="divi">
           <h3><FaEdit style={{ color: '#43381b' }}/>Personaliza tu QR:</h3>
           <MyComponent
             onColorChange={handleColorChange}
@@ -128,8 +128,8 @@ function Crearqr() {
         </div>
         <div className="modales">
         
-  <div className="white gr">
-    <h3><FaSave></FaSave>Guardar</h3>       
+  <div className="divi gr">
+    <h3>Guardar</h3>       
   <ul><label for="nombre">Nombre:</label>
   <input type="text" id="nombre" name="nombre" value={nombre} onChange={handleNombreChange}/>
   </ul>
@@ -146,7 +146,7 @@ function Crearqr() {
                 </SaveDb>
     </div>   
 
-    <Button onClick={handleOpen} className='button-collapse'>Descargar <FaDownload/></Button>
+    <Button onClick={handleOpen} className='button-collapse'><FaDownload/> Descargar </Button>
           
           <Modal
             open={open}
@@ -188,7 +188,7 @@ function Crearqr() {
                     SVG
                   </label>
                 </div>
-                <button onClick={handleDownload1} className="button23">
+                <button onClick={handleDownload1} className="button-collapse">
                   Descargar QR
                 </button>
                 {descargado && <p className="pdescarga">¡El QR se ha descargado!</p>}

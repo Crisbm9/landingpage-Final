@@ -278,11 +278,14 @@ header{
   margin: 1em!important; 
   padding: .5em!important; 
   border-radius: 8px!important; 
-  background-color:#5C6D99!important; 
+  /* background-color:#5C6D99!important;  */
+  background-color: rgb(49, 49, 85)!important;
   color: antiquewhite!important; 
   border: 3px solid #43381b!important;
   text-decoration: none!important;
   text-align: center!important;
+  font-family: 'Franklin Gothic Medium';
+  font-size: medium;
 }
 
 .button-collapse:hover{

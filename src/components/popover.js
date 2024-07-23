@@ -23,7 +23,7 @@ export default function Pipiver (){
      return(
          <>
          <div>
-             <Button aria-describedby={id} variant="contained" style={{color: `white`,backgroundColor: `#4e517a`}} onClick={handleClick}>
+             <Button aria-describedby={id} variant="contained" style={{color: `white`,backgroundColor: `#1976D2`}} onClick={handleClick}>
              <StaticImage
         src="../images/perfill.png"
         loading="eager"
@@ -64,7 +64,7 @@ export default function Pipiver (){
      return(
          <>
          <div>
-             <Button aria-describedby={id} variant="contained" style={{color: `white`,backgroundColor: `#4e517a`}} onClick={handleClick}>
+             <Button aria-describedby={id} variant="contained" style={{color: `white`,backgroundColor: `#1976D2`}} onClick={handleClick}>
              <StaticImage
         src="../images/perfill.png"
         loading="eager"
@@ -105,7 +105,7 @@ export default function Pipiver (){
      return(
          <>
          <div>
-             <Button aria-describedby={id} variant="contained" style={{color: `white`,backgroundColor: `#4e517a`}} onClick={handleClick}>
+             <Button aria-describedby={id} variant="contained" style={{color: `white`,backgroundColor: `#1976D2`}} onClick={handleClick}>
              <StaticImage
         src="../images/perfill.png"
         loading="eager"

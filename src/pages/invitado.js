@@ -4,9 +4,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Link } from 'gatsby';
 import { Button } from '@mui/material';
 
-
-
 export default function Invitado (){
+ 
   const rol = localStorage.getItem('tandem_role')
   if(rol=='guest'){
     return(
@@ -20,8 +19,8 @@ export default function Invitado (){
   <StaticImage
     src="../images/escaleras.jpg"
     loading="eager"
-    width={900}
-    height={600}
+    width={1000}
+    height={700}
     quality={95}
     formats={["auto", "webp", "avif"]}
     alt=""
@@ -30,10 +29,27 @@ export default function Invitado (){
   </div>
   <div class="columna">
  
-    <ul>
-      <li><a href="/profile" role='button' className="">Perfil</a></li>
-      <li><a href="/page-infoinstitucional" role='button' className="">Información Institucional</a></li>
-      </ul>
+      <ul>
+        <li>
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/profile"
+    >
+      Perfil
+    </Button></li>
+    <li>
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/page-infoinstitucional"
+    >
+      Información Institucional
+    </Button>
+    </li>
+    </ul>
     </div>
 </div>
 
@@ -53,8 +69,8 @@ if(rol=='employee'){
   <StaticImage
     src="../images/escaleras.jpg"
     loading="eager"
-    width={900}
-    height={600}
+    width={1000}
+    height={700}
     quality={95}
     formats={["auto", "webp", "avif"]}
     alt=""
@@ -63,11 +79,37 @@ if(rol=='employee'){
   </div>
   <div class="columna">
  
-    <ul>
-      <li><a href="/profile" role='button' className="">Perfil</a></li>
-      <li><a href="/page-infoinstitucional" role='button' className="">Información Institucional</a></li>
-      <li><a href="/crear-qr" role='button' className="">Crear QR</a></li>
-      </ul>
+
+        <ul>
+        <li>
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/profile"
+    >
+      Perfil
+    </Button></li>
+    <li>
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/page-infoinstitucional"
+    >
+      Información Institucional
+    </Button>
+    </li>
+    <li>
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/crear-qr"
+    >
+      Crear QR
+    </Button></li>
+    </ul>
     </div>
 </div>
 
@@ -86,8 +128,8 @@ if(rol=='admin'){
   <StaticImage
     src="../images/escaleras.jpg"
     loading="eager"
-    width={900}
-    height={600}
+    width={1000}
+    height={700}
     quality={95}
     formats={["auto", "webp", "avif"]}
     alt=""
@@ -96,22 +138,56 @@ if(rol=='admin'){
   </div>
   <div class="columna">
  
-    <ul className="listaa">
-      <li><a href="/profile" role='button' className="">Perfil</a></li>
-      <li><a href="/page-infoinstitucional" role='button' className="">Información Institucional</a></li>
-      <li><a href="/crear-qr" role='button' className="">Crear QR</a></li>
-      <li><a href="/list-qr" role='button' className="">Listado de QR</a></li>
-      <li><a href="/admin-user" role='button' className="">Administrar empleados</a></li>
-      </ul>
-    
+      <ul>
+        <li>
     <Button
       variant="contained"
       color="primary"
       component={Link}
-      to="/your-target-page"
+      to="/profile"
     >
-      Ir a la Página
-    </Button></div>
+      Perfil
+    </Button></li>
+    <li>
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/page-infoinstitucional"
+    >
+      Información Institucional
+    </Button>
+    </li>
+    <li>
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/crear-qr"
+    >
+      Crear QR
+    </Button></li>
+    <li>
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/list-qr"
+    >
+      Listado de QR
+    </Button></li>
+    <li>
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/admin-user"
+    >
+      Administrar empleados
+    </Button></li>
+    </ul>
+
+    </div>
 </div>
 </div>
       

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from "@mui/material";
+import { FaDownload, FaEdit, FaSave } from 'react-icons/fa';
 
 const SaveDb= ({data,nref,desc})=>{
 const [mensaje, setMensaje]=useState(false)
@@ -34,7 +35,7 @@ const [respuesta, setRespuesta]=useState('')
 
    return(
     <>
-    <Button onClick={saveQr} className='button-collapse'>Guardar</Button>
+    <Button onClick={saveQr} className='button-collapse'><FaSave></FaSave> Guardar </Button>
     {mensaje && <p>{respuesta.message}</p> }
     </>
    ) 

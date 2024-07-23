@@ -22,9 +22,11 @@ const Profile = () => {
       <p>Email: {localStorage.getItem('tandem_email')}</p>
       <p>Id: {localStorage.getItem('tandem_id')}</p>
           </div>
+          <br></br>
       <a href="/contrasenia" role='button' className='botoncito'>Cambiar contraseña</a>
       <br></br>
       <br></br>
+      
       <CerrarSesion></CerrarSesion>
       
       </div>

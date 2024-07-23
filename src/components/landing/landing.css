@@ -46,6 +46,8 @@
   width: 260px; 
   height: 60px; 
   text-decoration: none;
+  font-family: 'Franklin Gothic Medium';
+  font-size: large;
 
 } 
 .button:hover{
