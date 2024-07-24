@@ -2,16 +2,16 @@ import * as React from "react";
 import { useState, useRef } from "react";
 import Layout from "../components/layout";
 import Collapse2 from "../components/crearqr-componentes/collapse2";
-import MyComponent from "../components/crearqr-componentes/componente1";
+import Componente1 from "../components/crearqr-componentes/componente1";
 import QRCode from 'qrcode.react';
 import { toPng, toJpeg, toSvg } from 'html-to-image';
 import download from "downloadjs";
-import CenteredTabs from "../components/tabs";
+import CenterTabs from "../components/centertabs";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { FaDownload, FaEdit, FaSave } from 'react-icons/fa';
+import { FaDownload, FaEdit } from 'react-icons/fa';
 import SaveDb from "../components/savedb";
 
 
@@ -99,7 +99,7 @@ function Crearqr() {
         <Collapse2 />
 
         <div className="divi">
-          <CenteredTabs 
+          <CenterTabs 
             inputValue={inputValue} 
             setInputValue={setInputValue} 
             latLng={latLng} 
@@ -120,7 +120,7 @@ function Crearqr() {
 
         <div className="divi">
           <h3><FaEdit style={{ color: '#43381b' }}/>Personaliza tu QR:</h3>
-          <MyComponent
+          <Componente1
             onColorChange={handleColorChange}
             onSizeChange={handleSizeChange}
             colorOptions={colorOptions}

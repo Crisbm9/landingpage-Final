@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 
-const Login = () => {
+const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -56,12 +56,12 @@ const Login = () => {
       />
       <button onClick={handleLogin} className='buform'>Entrar</button>
       <p>{message}</p>
-      {/* <a href="/contrasenia" role='button' className='aform'>¿Olvidaste tu contraseña?</a> */}
+      
       <br></br>
       <a href="/formulario" role='button' className='aformi' >Registrarse</a>
     </div>
   );
 };
 
-export default Login;
+export default LoginForm;
 

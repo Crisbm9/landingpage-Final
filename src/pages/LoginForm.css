@@ -2,8 +2,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* height: 100vh; */
-  /* padding-right: 2rem; */
   color: black;
   
 }
@@ -11,10 +9,7 @@
   padding: 4rem;
   padding-bottom: 6rem;
   border-radius: 8px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   border: 3px solid #43381b;
-  /* background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(80,80,80,0.9360994397759104) 28%, rgba(108,108,108,1) 38%, rgba(207,204,204,1) 72%); */
-  background-color: #efd09282;
   box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
   margin-right: 30%;
 
@@ -34,9 +29,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-/* .login-form input::placeholder {
-  color: #2a2a2a;
-}  */
+
 .login-form button {
   margin-top: 2rem;
   width: 100%;

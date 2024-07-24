@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
-import Usuarios from "../components/tabla-usuarios";
-function AdminUsuarios(){
+import Usuarios from "../components/usuarios";
+function AdminUser(){
 return(
     <>
     <Layout>
@@ -10,4 +10,4 @@ return(
     </>
 )
 }
-export default AdminUsuarios
+export default AdminUser

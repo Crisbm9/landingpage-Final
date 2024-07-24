@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-function MyComponent({ onColorChange, onSizeChange }) {
+function Componente1({ onColorChange, onSizeChange }) {
   const [selectedColor, setSelectedColor] = useState('negro');
   const [selectedSize, setSelectedSize] = useState('pequeño');
   const handleColorChange = (event) => {
@@ -43,4 +43,4 @@ function MyComponent({ onColorChange, onSizeChange }) {
     </div>
   );
 }
-export default MyComponent;
+export default Componente1;

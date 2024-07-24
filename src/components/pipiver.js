@@ -109,7 +109,7 @@ export default function Pipiver (){
              <StaticImage
         src="../images/perfill.png"
         loading="eager"
-        width={43}
+        width={50}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""

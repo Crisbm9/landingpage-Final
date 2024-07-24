@@ -23,7 +23,7 @@ const Profile = () => {
       <p>Id: {localStorage.getItem('tandem_id')}</p>
           </div>
           <br></br>
-      <a href="/contrasenia" role='button' className='botoncito'>Cambiar contraseña</a>
+      <a href="/contrasena" role='button' className='botoncito'>Cambiar contraseña</a>
       <br></br>
       <br></br>
       

@@ -1,8 +1,8 @@
 import React from "react";
-import ForgotPassword from "../components/contrasena";
+import ForgotPassword from "../components/forgotpassword";
 import Layout from "../components/layout";
 
-const contrasenia= ()=>{
+const contrasena= ()=>{
 return(
   <Layout>
     <div className="qrinicio">
@@ -11,4 +11,4 @@ return(
   </Layout>
 )
 }
-export default contrasenia
+export default contrasena

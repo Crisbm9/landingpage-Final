@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { FaQuestionCircle } from "react-icons/fa";
 
-function Collapse({ isCollapsed, children }) {
+function Collapse1({ isCollapsed, children }) {
   const [show, setShow] = useState(isCollapsed);
 
   const handleToggle = () => {
@@ -19,4 +19,4 @@ function Collapse({ isCollapsed, children }) {
   );
 }
 
-export default Collapse;
+export default Collapse1;

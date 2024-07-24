@@ -26,7 +26,7 @@ function TabPanel(props) {
   );
 }
 
-export default function CenteredTabs({ inputValue, setInputValue, latLng, setLatLng, setInputType }) {
+export default function CenterTabs({ inputValue, setInputValue, latLng, setLatLng, setInputType }) {
   const [value, setValue] = React.useState(0);
 
   const handleLatChange = (event) => {

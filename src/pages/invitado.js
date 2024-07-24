@@ -44,7 +44,7 @@ export default function Invitado (){
       variant="contained"
       color="primary"
       component={Link}
-      to="/page-infoinstitucional"
+      to="/info"
     >
       Información Institucional
     </Button>
@@ -95,7 +95,7 @@ if(rol=='employee'){
       variant="contained"
       color="primary"
       component={Link}
-      to="/page-infoinstitucional"
+      to="/info"
     >
       Información Institucional
     </Button>
@@ -105,7 +105,7 @@ if(rol=='employee'){
       variant="contained"
       color="primary"
       component={Link}
-      to="/crear-qr"
+      to="/crearqr"
     >
       Crear QR
     </Button></li>
@@ -153,7 +153,7 @@ if(rol=='admin'){
       variant="contained"
       color="primary"
       component={Link}
-      to="/page-infoinstitucional"
+      to="/info"
     >
       Información Institucional
     </Button>
@@ -163,7 +163,7 @@ if(rol=='admin'){
       variant="contained"
       color="primary"
       component={Link}
-      to="/crear-qr"
+      to="/crearqr"
     >
       Crear QR
     </Button></li>
@@ -172,7 +172,7 @@ if(rol=='admin'){
       variant="contained"
       color="primary"
       component={Link}
-      to="/list-qr"
+      to="/listqr"
     >
       Listado de QR
     </Button></li>
@@ -181,7 +181,7 @@ if(rol=='admin'){
       variant="contained"
       color="primary"
       component={Link}
-      to="/admin-user"
+      to="/adminuser"
     >
       Administrar empleados
     </Button></li>

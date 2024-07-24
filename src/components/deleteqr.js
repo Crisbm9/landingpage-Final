@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const EliminarQR = ({qr, onUserUpdated}) => {
+const DeleteQr = ({qr, onUserUpdated}) => {
   const [nombreRef, setNombreRef] = useState(qr);
   const [message, setMessage] = useState('');
 
@@ -47,4 +47,4 @@ const EliminarQR = ({qr, onUserUpdated}) => {
   );
 };
 
-export default EliminarQR;
+export default DeleteQr;

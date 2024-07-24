@@ -1,6 +1,7 @@
 import React from "react";
 
-import TandemButton from "../button/tandembutton";
+import { Link } from 'gatsby';
+import { Button } from '@mui/material';
 import "./landing.css"
 
 
@@ -17,15 +18,20 @@ function Landing(){
     </div>
     <div className="botones">
 
-    
-    <TandemButton enlace="page-2" >Acceso empleados</TandemButton>
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/acceso"
+    >
+      Acceso empleados
+    </Button>
     
     <br></br>
     
-    {/* <TandemButton enlace="page-infoinstitucional">Información Institucional</TandemButton> */}
     
 
-   </div>
+    </div>
     
     </div>
   )

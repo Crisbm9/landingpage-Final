@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import QRCode from 'qrcode.react';
 import Layout from '../components/layout';
 import ModalTandem from '../components/modaltandem';
-import EliminarQR from '../components/deleteqr';
+import DeleteQr from '../components/deleteqr';
 import { Card, CardContent, CardActions, Typography, Button } from '@mui/material';
 
-const QrCodeList = (url) => {
+const ListQr = (url) => {
   const [qrCodes, setQrCodes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -99,7 +99,7 @@ const QrCodeList = (url) => {
               <CardActions>
                 <ModalTandem
                   boton="Borrar"
-                  text={<EliminarQR qr={qrCode.qr_nombre_ref} onUserUpdated={handleUserUpdated} />}
+                  text={<DeleteQr qr={qrCode.qr_nombre_ref} onUserUpdated={handleUserUpdated} />}
                 />
               </CardActions>
             </Card>
@@ -110,4 +110,4 @@ const QrCodeList = (url) => {
   );
 };
 
-export default QrCodeList;
+export default ListQr;

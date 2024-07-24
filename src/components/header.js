@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
-        style={{ marginBottom: `var(--space-3)` }}
+        style={{ marginBottom: `var(--space-3)`}}
       />
       </a>
       <div className="headerperfil">
