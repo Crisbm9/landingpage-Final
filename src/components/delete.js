@@ -13,7 +13,7 @@ const DeleteUserButton = ({emaili, onUserUpdated}) => {
     }
 
     try {
-      const response = await fetch('http://localhost/api-qr-tandem/v1/delete-user.php', {
+      const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/delete-user.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

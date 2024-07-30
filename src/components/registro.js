@@ -2,26 +2,26 @@ import React, { useState } from 'react';
 
 const Registro = () => {
     const [nombre, setNombre] = useState('');
-    const [departamento, setDepartamento] = useState('');
+    const [delegacion, setdelegacion] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
 
     const handleNombre = (e) => setNombre(e.target.value);
-    const handleDepartamento = (e) => setDepartamento(e.target.value);
+    const handledelegacion = (e) => setdelegacion(e.target.value);
     const handleEmail = (e) => setEmail(e.target.value);
     const handlePassword = (e) => setPassword(e.target.value);
 
     const handleRegistro = async () => {
         try {
-            const response = await fetch('http://localhost/api-qr-tandem/v1/register-user.php', {
+            const response = await fetch('https://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/register-user.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     nombre,
-                    departamento,
+                    delegacion,
                     email,
                     password
                 })
@@ -51,13 +51,13 @@ const Registro = () => {
                 value={nombre}
                 onChange={handleNombre}
             />
-            <label htmlFor='departamento'>Departamento:</label>
+            <label htmlFor='delegacion'>Delegacion:</label>
             <input
                 type="text"
-                placeholder="Introduce tu departamento"
-                id='departamento'
-                value={departamento}
-                onChange={handleDepartamento}
+                placeholder="Introduce tu delegacion"
+                id='delegacion'
+                value={delegacion}
+                onChange={handledelegacion}
             />
             <label htmlFor='email'>Email:</label>
             <input

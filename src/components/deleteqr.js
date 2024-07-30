@@ -8,7 +8,7 @@ const DeleteQr = ({qr, onUserUpdated}) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost/api-qr-tandem/v1/delete-qr.php', {
+      const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/delete-qr.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -5,7 +5,7 @@ function AdminUser(){
 return(
     <>
     <Layout>
-    <Usuarios></Usuarios>
+    <Usuarios url='http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/list-users.php'></Usuarios>
     </Layout>
     </>
 )

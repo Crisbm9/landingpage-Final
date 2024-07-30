@@ -10,7 +10,7 @@ const [respuesta, setRespuesta]=useState('')
     const saveQr= async () => {
        
         try {
-            const response = await fetch('http://localhost/api-qr-tandem/v1/create-qr.php', {
+            const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/create-qr.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

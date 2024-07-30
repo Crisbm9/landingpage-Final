@@ -9,7 +9,7 @@ const UpdateUser = ({emaill, rolee, onUserUpdated}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost/api-qr-tandem/v1/change-role.php', {
+    const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/change-role.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -32,7 +32,6 @@ const UpdateUser = ({emaill, rolee, onUserUpdated}) => {
         <div>
           <label>
             Role:
-            {/* <input type="text" value={role} onChange={(e) => setRole(e.target.value)} required /> */}
             <select id="roleSelect" value={role} onChange={(e) => setRole(e.target.value)} required>
             <option value="admin">Admin</option>
             <option value="employee">Employee</option>

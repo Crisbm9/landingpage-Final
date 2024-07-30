@@ -23,6 +23,7 @@ function Landing(){
       color="primary"
       component={Link}
       to="/acceso"
+      className="button-collapse"
     >
       Acceso empleados
     </Button>

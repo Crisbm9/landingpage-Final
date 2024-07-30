@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 
-const ModificarUsuario = ({ initialNombre,  initialEmail, initialDepartamento, onUserUpdated }) => {
+const ModificarUsuario = ({ initialNombre,  initialEmail, initialdelegacion, onUserUpdated }) => {
   const [nombre, setNombre] = useState(initialNombre);
   const [email, setEmail] = useState(initialEmail);
-  const [departamento, setDepartamento] = useState(initialDepartamento);
+  const [delegacion, setdelegacion] = useState(initialdelegacion);
   const [message, setMessage] = useState('');
 
   const manejarUsuario = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost/api-qr-tandem/v1/update-user.php', {
+      const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/update-user.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ nombre, email, departamento }),
+        body: JSON.stringify({ nombre, email, delegacion }),
       });
 
       if (!response.ok) {
@@ -47,8 +47,8 @@ const ModificarUsuario = ({ initialNombre,  initialEmail, initialDepartamento, o
         </div>
         <div>
           <label>
-            Departamento:
-            <input type="text" value={departamento} onChange={(e) => setDepartamento(e.target.value)} required />
+            delegacion:
+            <input type="text" value={delegacion} onChange={(e) => setdelegacion(e.target.value)} required />
           </label>
         </div>
         <button type="submit">Actualizar</button>

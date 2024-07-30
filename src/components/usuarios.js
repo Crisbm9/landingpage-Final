@@ -6,7 +6,8 @@ import DeleteUserButton from './delete';
 import Registro from './registro';
 import { Card, CardContent, CardActions, Typography, Button } from '@mui/material';
 
-const Usuarios = (url,) => {
+
+const Usuarios = ({url}) => {
   const [users, setUsers] = useState([]);
   const [message, setMessage] = useState('');
   const [refresh, setRefresh] = useState(false);
@@ -17,13 +18,15 @@ const Usuarios = (url,) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost/api-qr-tandem/v1/list-users.php');
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error('Error al cargar los usuarios');
         }
         const data = await response.json();
         setUsers(data.users);
         setMessage(data.message);
+        setRefresh(true)
+        handleUserUpdated();
       } catch (error) {
         console.error('Error fetching users', error);
         setMessage('Error al cargar los usuarios');
@@ -90,13 +93,13 @@ const Usuarios = (url,) => {
               <Typography variant="h6">{user.nombre}</Typography>
               <Typography variant="body2">Id: {user.id}</Typography>
               <Typography variant="body2">Email: {user.email}</Typography>
-              <Typography variant="body2">Departamento: {user.departamento}</Typography>
+              <Typography variant="body2">Departamento: {user.delegacion}</Typography>
               <Typography variant="body2">Role: {user.role}</Typography>
             </CardContent>
             <CardActions>
               <ModalTandem
                 boton="Modificar"
-                text={<ModificarUsuario initialEmail={user.email} initialNombre={user.nombre} initialDepartamento={user.departamento} onUserUpdated={handleUserUpdated} />}
+                text={<ModificarUsuario initialEmail={user.email} initialNombre={user.nombre} initialDepartamento={user.delegacion} onUserUpdated={handleUserUpdated} />}
               />
               <ModalTandem
                 boton="Cambiar rol"
