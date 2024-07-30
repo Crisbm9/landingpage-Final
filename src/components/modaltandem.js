@@ -13,7 +13,8 @@ const style = {
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
-  p: 4,
+  p: 5.5,
+
 };
 
 export default function ModalTandem({text,boton}) {

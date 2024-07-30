@@ -5,6 +5,8 @@ import ModalTandem from './modaltandem';
 import DeleteUserButton from './delete';
 import Registro from './registro';
 import { Card, CardContent, CardActions, Typography, Button } from '@mui/material';
+import { MdBatteryCharging30 } from 'react-icons/md';
+import { Margin } from '@mui/icons-material';
 
 
 const Usuarios = ({url}) => {
@@ -77,6 +79,7 @@ const Usuarios = ({url}) => {
         boton="+ Registrar nuevo usuario"
         text={<Registro />}
       />
+
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
       {search(users).map((user) => (
         // {users.map((user) => (
