@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import '../components/layout.css';
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
+import CerrarSesion from "../components/cerrarsesion";
 
 const Profile = () => {
   const [profileData, setProfileData] = useState({
@@ -49,14 +50,19 @@ const Profile = () => {
             style={{ width: '100px', height: '100px' }}
           />
         )}
+        <br></br>
+        <p>Cambiar imagen de usuario:</p>
         <input type="file" accept="image/*" onChange={handleImageChange} className="file-input" />
+        <br></br>
+        <br></br>
         <p className="profile-item">Nombre: {profileData.nombre}</p>
         <p className="profile-item">Email: {profileData.email}</p>
         <p className="profile-item">Id: {profileData.id}</p>
 
         <br/>
-        <a href="/contrasena" role='button' className='botoncito'>Cambiar contraseña</a>
-          Cambiar contraseña
+        <a href="/contrasena" role='button' className='aform'>Cambiar contraseña</a>
+        <br/>
+        <CerrarSesion />
         
       </div>
     </div>
