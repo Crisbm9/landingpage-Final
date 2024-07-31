@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import { StaticImage } from "gatsby-plugin-image"
 import CerrarSesion from './cerrarsesion';
 
+const isBrowser = typeof window !== "undefined";
+
 export default function Pipiver (){
    const [anchorEl, setAnchorEl] = React.useState(null);
    const handleClick = (event) => {
@@ -14,8 +16,11 @@ export default function Pipiver (){
    const handleClose = () => {
      setAnchorEl(null);
    };
-   const rol = localStorage.getItem('tandem_role')
-   const email = localStorage.getItem('tandem_email')
+//    const rol = localStorage.getItem('tandem_role')
+//    const email = localStorage.getItem('tandem_email')
+const rol = isBrowser ? localStorage.getItem('tandem_role') : '';
+  const email = isBrowser ? localStorage.getItem('tandem_email') : '';
+
    const open = Boolean(anchorEl);
    const id = open ? 'simple-popover' : undefined;
   
@@ -130,8 +135,8 @@ export default function Pipiver (){
                  <Typography sx={{ p: 2 }}  style={{}}>
            
         <ul>
-        <li><a href="/profile" role='button' className='aform'>Perfil</a></li>
-        <li><a href="/invitado" role='button' className='aform'>Inicio</a></li>
+        <li><a href="/profile" role='button' className='aform'>PERFIL</a></li>
+        <li><a href="/invitado" role='button' className='aform'>INICIO</a></li>
         <li><CerrarSesion></CerrarSesion></li>
         </ul>
                  </Typography>

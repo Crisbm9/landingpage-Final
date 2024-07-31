@@ -1,45 +1,87 @@
 import React, { useState } from 'react';
 import { Button } from "@mui/material";
-import { FaDownload, FaEdit, FaSave } from 'react-icons/fa';
+import { FaSave } from 'react-icons/fa';
 
-const SaveDb= ({data,nref,desc})=>{
-const [mensaje, setMensaje]=useState(false)
-const [respuesta, setRespuesta]=useState('')
+const SaveDb = ({ data, nref, desc }) => {
+    const [mensaje, setMensaje] = useState(false);
+    const [respuesta, setRespuesta] = useState('');
 
-
-    const saveQr= async () => {
-       
-        try {
-            const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/create-qr.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    "data": data,
-                    "nombre_ref": nref,
-                    "description": desc,
-                    "created_by": localStorage.getItem('tandem_id')
-                })
-            });
-            const respuesta=await response.json();
-           setRespuesta(respuesta.message)
-           setMensaje(true)
-           console.log(respuesta.message)
-
-        } catch (error) {
-            console.error('Error creando código QR', error);
-        
+    const saveQr = async () => {
+        if (typeof window !== 'undefined') { // Verifica si el código se está ejecutando en el navegador
+            try {
+                const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/create-qr.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        "data": data,
+                        "nombre_ref": nref,
+                        "description": desc,
+                        "created_by": localStorage.getItem('tandem_id')
+                    })
+                });
+                const respuesta = await response.json();
+                setRespuesta(respuesta.message);
+                setMensaje(true);
+                console.log(respuesta.message);
+            } catch (error) {
+                console.error('Error creando código QR', error);
+            }
         }
     };
 
-   return(
-    <>
-    <Button onClick={saveQr} className='button-collapse'><FaSave></FaSave> Guardar </Button>
-    {mensaje && <p>{respuesta.message}</p> }
-    </>
-   ) 
-}
+    return (
+        <>
+            <Button onClick={saveQr} className='button-collapse'><FaSave /> Guardar </Button>
+            {mensaje && <p>{respuesta}</p>}
+        </>
+    );
+};
+
+export default SaveDb;
+// import React, { useState } from 'react';
+// import { Button } from "@mui/material";
+// import { FaDownload, FaEdit, FaSave } from 'react-icons/fa';
+
+// const SaveDb= ({data,nref,desc})=>{
+// const [mensaje, setMensaje]=useState(false)
+// const [respuesta, setRespuesta]=useState('')
 
 
-export default SaveDb
+//     const saveQr= async () => {
+       
+//         try {
+//             const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/create-qr.php', {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json'
+//                 },
+//                 body: JSON.stringify({
+//                     "data": data,
+//                     "nombre_ref": nref,
+//                     "description": desc,
+//                     "created_by": localStorage.getItem('tandem_id')
+//                 })
+//             });
+//             const respuesta=await response.json();
+//            setRespuesta(respuesta.message)
+//            setMensaje(true)
+//            console.log(respuesta.message)
+
+//         } catch (error) {
+//             console.error('Error creando código QR', error);
+        
+//         }
+//     };
+
+//    return(
+//     <>
+//     <Button onClick={saveQr} className='button-collapse'><FaSave></FaSave> Guardar </Button>
+//     {mensaje && <p>{respuesta.message}</p> }
+//     </>
+//    ) 
+// }
+
+
+// export default SaveDb

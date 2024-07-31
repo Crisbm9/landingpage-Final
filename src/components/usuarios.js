@@ -4,9 +4,7 @@ import ModificarUsuario from './modificarusuario';
 import ModalTandem from './modaltandem';
 import DeleteUserButton from './delete';
 import Registro from './registro';
-import { Card, CardContent, CardActions, Typography, Button } from '@mui/material';
-import { MdBatteryCharging30 } from 'react-icons/md';
-import { Margin } from '@mui/icons-material';
+import { Card, CardContent, CardActions, Typography } from '@mui/material';
 
 
 const Usuarios = ({url}) => {
@@ -82,7 +80,6 @@ const Usuarios = ({url}) => {
 
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
       {search(users).map((user) => (
-        // {users.map((user) => (
           <Card key={user.id} 
           sx={{
             width: '300px',
