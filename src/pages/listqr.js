@@ -5,19 +5,18 @@ import ModalTandem from '../components/modaltandem';
 import DeleteQr from '../components/deleteqr';
 import { Card, CardContent, CardActions, Typography, Button } from '@mui/material';
 
-const ListQr = () => {
+const ListQr = (url) => {
   const [qrCodes, setQrCodes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [refresh, setRefresh] = useState(false);
   const [q, setQ] = useState("");
   const [searchParam] = useState(["qr_nombre_ref", "qr_data", "qr_created_at"]);
-  const url='http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/list-qr.php'
 
-  useEffect((url) => {
+  useEffect(() => {
     const fetchQrCodes = async () => {
       try {
-        const response = await fetch(url);
+        const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/list-qr.php');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
