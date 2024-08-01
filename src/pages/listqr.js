@@ -3,15 +3,14 @@ import QRCode from 'qrcode.react';
 import Layout from '../components/layout';
 import ModalTandem from '../components/modaltandem';
 import DeleteQr from '../components/deleteqr';
-import { Card, CardContent, CardActions, Typography, Button } from '@mui/material';
+import { Card, CardContent, CardActions, Typography } from '@mui/material';
 
 const ListQr = (url) => {
   const [qrCodes, setQrCodes] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [refresh, setRefresh] = useState(false);
   const [q, setQ] = useState("");
-  const [searchParam] = useState(["qr_nombre_ref", "qr_data", "qr_created_at"]);
+  const [searchParam] = useState(["qr_nombre_ref"]);
 
   useEffect(() => {
     const fetchQrCodes = async () => {
@@ -24,9 +23,7 @@ const ListQr = (url) => {
         setQrCodes(data.qr_codes);
       } catch (error) {
         setError(error);
-      } finally {
-        setLoading(false);
-      }
+      } 
     };
 
     fetchQrCodes();
