@@ -10,6 +10,7 @@ const isBrowser = typeof window !== "undefined";
 
 export default function Pipiver (){
    const [anchorEl, setAnchorEl] = React.useState(null);
+   const name = localStorage.getItem('tandem_nombre')
    const handleClick = (event) => {
      setAnchorEl(event.currentTarget);
    };
@@ -29,7 +30,7 @@ const rol = isBrowser ? localStorage.getItem('tandem_role') : '';
          <>
          <div>
              <Button aria-describedby={id} variant="contained" style={{color: `white`,backgroundColor: `#1976D2`}} onClick={handleClick}>
-             <StaticImage
+            <StaticImage
         src="../images/perfill.png"
         loading="eager"
         width={43}
@@ -38,7 +39,7 @@ const rol = isBrowser ? localStorage.getItem('tandem_role') : '';
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
-            {/* popover */}
+           {name}
              </Button>
              <Popover
                  id={id}
@@ -79,7 +80,7 @@ const rol = isBrowser ? localStorage.getItem('tandem_role') : '';
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
-                 {/* popover */}
+                  {name}
              </Button>
              <Popover
                  id={id}
@@ -120,7 +121,7 @@ const rol = isBrowser ? localStorage.getItem('tandem_role') : '';
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
-             {/* Popover */}
+              {name}
              </Button>
              <Popover
                  id={id}
