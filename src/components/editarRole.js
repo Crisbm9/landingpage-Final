@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 
-const UpdateUser = ({emaill, rolee, onUserUpdated}) => {
+const EditarRole = ({emaill, rolee, onUserUpdated}) => {
   const [email, setEmail] = useState(emaill);
   const [role, setRole] = useState(rolee);
   const [message, setMessage] = useState('');
@@ -46,4 +46,4 @@ const UpdateUser = ({emaill, rolee, onUserUpdated}) => {
   );
 };
 
-export default UpdateUser;
+export default EditarRole;

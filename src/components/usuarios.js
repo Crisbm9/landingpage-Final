@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import UpdateUser from './editarRole';
+import EditarRole from './editarRole';
 import ModificarUsuario from './modificarusuario';
 import ModalTandem from './modaltandem';
 import DeleteUserButton from './delete';
@@ -103,7 +103,7 @@ const Usuarios = ({url}) => {
               />
               <ModalTandem
                 boton="Cambiar rol"
-                text={<UpdateUser emaill={user.email} rolee={user.role} onUserUpdated={handleUserUpdated} />}
+                text={<EditarRole emaill={user.email} rolee={user.role} onUserUpdated={handleUserUpdated} />}
               />
               <ModalTandem
                 boton="Borrar"
