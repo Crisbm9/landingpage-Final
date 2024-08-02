@@ -9,7 +9,7 @@ const UpdateUser = ({emaill, rolee, onUserUpdated}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/change-role.php', {
+    const response = await fetch('https://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/change-role.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

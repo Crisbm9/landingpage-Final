@@ -13,7 +13,7 @@ const ForgotPassword = () => {
     e.preventDefault(); // Prevent default form submission behavior
 
     try {
-      const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/change-password.php', {
+      const response = await fetch('https://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/change-password.php', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
