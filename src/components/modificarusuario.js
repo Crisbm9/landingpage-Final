@@ -10,7 +10,7 @@ const ModificarUsuario = ({ initialNombre,  initialEmail, initialdelegacion, onU
     e.preventDefault();
 
     try {
-      const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/update-user.php', {
+      const response = await fetch('https://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/update-user.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
