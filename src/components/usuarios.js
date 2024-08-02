@@ -99,7 +99,7 @@ const Usuarios = ({url}) => {
             <CardActions>
               <ModalTandem
                 boton="Modificar"
-                text={<ModificarUsuario initialEmail={user.email} initialNombre={user.nombre} initialDepartamento={user.delegacion} onUserUpdated={handleUserUpdated} />}
+                text={<ModificarUsuario initialEmail={user.email} initialNombre={user.nombre} initialdelegacion={user.delegacion} onUserUpdated={handleUserUpdated} />}
               />
               <ModalTandem
                 boton="Cambiar rol"

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const ModificarUsuario = ({ initialNombre,  initialEmail, initialdelegacion, onUserUpdated }) => {
   const [nombre, setNombre] = useState(initialNombre);
   const [email, setEmail] = useState(initialEmail);
-  const [delegacion, setdelegacion] = useState(initialdelegacion);
+  const [delegacion, setDelegacion] = useState(initialdelegacion);
   const [message, setMessage] = useState('');
 
   const manejarUsuario = async (e) => {
@@ -47,8 +47,8 @@ const ModificarUsuario = ({ initialNombre,  initialEmail, initialdelegacion, onU
         </div>
         <div>
           <label>
-            delegacion:
-            <input type="text" value={delegacion} onChange={(e) => setdelegacion(e.target.value)} required />
+            Delegacion:
+            <input type="text" value={delegacion} onChange={(e) => setDelegacion(e.target.value)} required />
           </label>
         </div>
         <button type="submit">Actualizar</button>
