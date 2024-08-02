@@ -15,7 +15,7 @@ const ListQr = (url) => {
   useEffect(() => {
     const fetchQrCodes = async () => {
       try {
-        const response = await fetch('http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/list-qr.php');
+        const response = await fetch('https://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/list-qr.php');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
