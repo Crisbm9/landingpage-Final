@@ -17,6 +17,8 @@ export default function Pipiver (){
    const handleClose = () => {
      setAnchorEl(null);
    };
+//    const rol = localStorage.getItem('tandem_role')
+//    const email = localStorage.getItem('tandem_email')
 const rol = isBrowser ? localStorage.getItem('tandem_role') : '';
   const email = isBrowser ? localStorage.getItem('tandem_email') : '';
 
@@ -108,7 +110,7 @@ const rol = isBrowser ? localStorage.getItem('tandem_role') : '';
    if(rol=='admin'){
      return(
          <>
-         <div >
+         <div>
              <Button aria-describedby={id} variant="contained" style={{color: `white`,backgroundColor: `#1976D2`}} onClick={handleClick}>
              <StaticImage
         src="../images/perfill.png"

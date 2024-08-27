@@ -232,7 +232,7 @@ pre tt:after {
 }
 /* ------------------------------------------------------------------------ */
 .infoinst{
-  background-color: #D4CCB2;
+  background-color: #efd092a5;
   padding: 2em;
 }
 .qrinicio{
@@ -436,6 +436,7 @@ input[type="radio"] {
 /* //////////////////////////////// */
 .headerperfil{
   float: right;
+  background-color: #5C6D99!important;
 }
 
 /* ////////////////////// */
@@ -577,27 +578,4 @@ background-color: #007bff;
     border: 3px solid #43381b;
     background-color: #efd09282;
     box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
-}
-
-.elemento1{
-  margin: 20px;
-  margin-top: 25px;
-}
-
-.enlacemenu{
-  text-decoration: none;
-  margin: 5px;
-  margin-top: 10px;
-  padding: 5px;
-  background-color: #D8D8F5;
-  border-radius: 5px 5px 5px 5px;
-  border: 1px solid black;
-  color:black;
-  cursor: pointer;
-  box-shadow: 2px 2px 8px #8282c1b1; /* Sombra azul */
-  transition: box-shadow 0.3s ease;
-}
-.enlacemenu:hover{
-  background-color: #1976D2;
-  color: white;
 }
