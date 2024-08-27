@@ -33,7 +33,7 @@ const rol = isBrowser ? localStorage.getItem('tandem_role') : '';
             <StaticImage
         src="../images/perfill.png"
         loading="eager"
-        width={43}
+        width={50}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -54,8 +54,8 @@ const rol = isBrowser ? localStorage.getItem('tandem_role') : '';
                  <Typography sx={{ p: 2 }}  style={{}}>
            
         <ul>
-        <li><a href="/profile" role='button' className='aform'>Perfil</a></li>
-        <li><a href="/invitado" role='button' className='aform'>Inicio</a></li>
+        <li><a href="/profile" role='button' className='aform'>PERFIL</a></li>
+        <li><a href="/invitado" role='button' className='aform'>INICIO</a></li>
         <li><CerrarSesion></CerrarSesion></li>
         </ul>
                 
@@ -74,7 +74,7 @@ const rol = isBrowser ? localStorage.getItem('tandem_role') : '';
              <StaticImage
         src="../images/perfill.png"
         loading="eager"
-        width={43}
+        width={50}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
@@ -95,8 +95,8 @@ const rol = isBrowser ? localStorage.getItem('tandem_role') : '';
                  <Typography sx={{ p: 2 }}  style={{}}>
            
         <ul>
-        <li><a href="/profile" role='button' className='aform'>Perfil</a></li>
-        <li><a href="/invitado" role='button' className='aform'>Inicio</a></li>
+        <li><a href="/profile" role='button' className='aform'>PERFIL</a></li>
+        <li><a href="/invitado" role='button' className='aform'>INICIO</a></li>
         <li><CerrarSesion></CerrarSesion></li>
         </ul>
                  

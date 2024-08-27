@@ -115,6 +115,16 @@ export default function Invitado() {
                     Crear QR
                   </Button>
                 </li>
+                <li>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    component={Link}
+                    to="/misqr"
+                  >
+                    Mis QR
+                  </Button>
+                </li>
               </ul>
             </div>
           </div>

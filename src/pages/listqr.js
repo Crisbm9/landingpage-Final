@@ -55,8 +55,9 @@ const ListQr = (url) => {
   return (
     <Layout>
       <div>
-        <h2>Listado de Códigos QR</h2>
+        <h2>Listado de Códigos QR</h2><a href="/misqr" role='button' className='aform'>Listado mis QR</a>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }} className="wrapper">
+        
         <div className="search-wrapper">
                 <label htmlFor="search-form">
                   <span className="sr-only">Buscar por nombre:</span>
@@ -71,7 +72,10 @@ const ListQr = (url) => {
                     style={{ width: '400px', height: '40px', fontSize: '16px', padding: '10px' }}
                   />
                 </label>
+                
               </div>
+
+              
           {search(qrCodes).map((qrCode) => (
             <Card key={qrCode.qr_id} 
             sx={{
