@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Pipiver from './pipiver';
+import Menu from "./menu";
+
+
+
 
 const PerfilOpc = () => {
     const [ide, setIde] = useState(null);
@@ -13,9 +17,19 @@ const PerfilOpc = () => {
     if (!ide) return null; // Return null or a loading spinner while ide is being fetched
 
     return (
-        <Pipiver />
+        <>
+        <div className="contenedor">
+        <div className="elemento1">
+        <Menu></Menu>
+        </div>
+        <div className="elemento">
+        <Pipiver/>
+        </div>
+       </div>
+        
+        </>
     );
-};
+}
 
 export default PerfilOpc;
 

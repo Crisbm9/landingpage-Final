@@ -7,7 +7,7 @@ const SaveDb = ({ data, nref, desc }) => {
     const [respuesta, setRespuesta] = useState('');
 
     const saveQr = async () => {
-        if (typeof window !== 'undefined') { // Verifica si el código se está ejecutando en el navegador
+        if (typeof window !== 'undefined') { 
             try {
                 const response = await fetch('https://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/create-qr.php', {
                     method: 'POST',
