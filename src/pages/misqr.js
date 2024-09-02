@@ -16,7 +16,7 @@ const MisQr = () => {
 
             if (userId) {
                 // Usa una variable de entorno para la URL de la API
-                const apiUrl = process.env.REACT_APP_API_URL || 'http://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/list-qr-user.php';
+                const apiUrl = process.env.REACT_APP_API_URL || 'https://cristina.tandempatrimonionacional.eu/api-qr-tandem/v1/list-qr-user.php';
 
                 axios.post(apiUrl, { id: userId })
                     .then(response => {
