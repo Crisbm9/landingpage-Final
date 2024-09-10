@@ -160,7 +160,7 @@ const Info = () => {
         </p>
         <Accordion items={accordionItems} />
       </div>
-      
+      <a href="https://paginaestaticapn.netlify.app/" role='button' className='aform'>+ INFO</a>
     </Layout>
   );
 };
