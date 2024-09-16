@@ -24,6 +24,7 @@ export default function Invitado() {
           <h1>¡Bienvenido {name}!</h1>
           <div className="contenedor">
             <div className="columna">
+              <div className="columnafoto">
               <StaticImage
                 src="../images/escaleras.jpg"
                 loading="eager"
@@ -33,7 +34,7 @@ export default function Invitado() {
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 style={{ marginBottom: `var(--space-3)` }}
-              />
+              /></div>
             </div>
             <div className="columna">
               <ul>
@@ -72,6 +73,7 @@ export default function Invitado() {
           <h1>¡Bienvenido {name}!</h1>
           <div className="contenedor">
             <div className="columna">
+            <div className="columnafoto">
               <StaticImage
                 src="../images/escaleras.jpg"
                 loading="eager"
@@ -81,7 +83,7 @@ export default function Invitado() {
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 style={{ marginBottom: `var(--space-3)` }}
-              />
+              /></div>
             </div>
             <div className="columna">
               <ul>
@@ -140,7 +142,7 @@ export default function Invitado() {
           <h1>¡Bienvenido {name}!</h1>
           <div className="contenedor">
             <div className="columna">
-              <StaticImage
+              <div className="columnafoto"><StaticImage
                 src="../images/escaleras.jpg"
                 loading="eager"
                 width={1000}
@@ -149,7 +151,7 @@ export default function Invitado() {
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 style={{ marginBottom: `var(--space-3)` }}
-              />
+              /></div>
             </div>
             <div className="columna">
               <ul>

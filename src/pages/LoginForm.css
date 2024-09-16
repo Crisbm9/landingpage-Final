@@ -1,6 +1,6 @@
 .login-form-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   color: black;
   
@@ -11,7 +11,7 @@
   border-radius: 8px;
   border: 3px solid #43381b;
   box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
-  margin-right: 30%;
+
  background-color: #D4CCB2;
 }
 .login-form h2 {

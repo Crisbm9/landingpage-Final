@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import Pipiver from './pipiver';
 import Menu from "./menu";
 
-
-
+import "./layout.css"
 
 const PerfilOpc = () => {
     const [ide, setIde] = useState(null);
@@ -18,7 +17,7 @@ const PerfilOpc = () => {
 
     return (
         <>
-        <div className="contenedor">
+<div className="contenedor">
         <div className="elemento1">
         <Menu></Menu>
         </div>
@@ -26,7 +25,6 @@ const PerfilOpc = () => {
         <Pipiver/>
         </div>
        </div>
-        
         </>
     );
 }

@@ -16,7 +16,7 @@ export default function Menu() {
   if (!role) return null; // Return null or a loading spinner while role is being fetched
 
   if (role === 'guest') {
-    return (<>
+    return (<div className="menu">
                   <a className="enlacemenu" href="/profile"
                   >
                     Perfil
@@ -26,12 +26,13 @@ export default function Menu() {
                   >
                     Información Institucional
                   </a>
-          </>      
+          </div>      
     );
   }
 
   if (role === 'employee') {
-    return (<>
+    return (<div className="menu">
+      
                   <a className="enlacemenu" href="/profile"
                   >
                     Perfil
@@ -48,12 +49,13 @@ export default function Menu() {
                   >
                     Mis QR
                   </a>
-                  </>
+                  </div>
     );
   }
 
   if (role === 'admin') {
-    return (<>
+    return (<div className="menu">
+      
                   <a className="enlacemenu" href="/profile"
                   >
                     Perfil
@@ -73,8 +75,8 @@ export default function Menu() {
                   <a className="enlacemenu" href="/adminuser"
                   >
                     Administrar empleados
-                  </a>
-                  </>
+                  </a></div>
+                 
     );
   }
 

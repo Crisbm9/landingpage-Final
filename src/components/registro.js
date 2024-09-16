@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./layout.css";
 
 const Registro = () => {
     const [nombre, setNombre] = useState('');
@@ -41,7 +42,7 @@ const Registro = () => {
     };
 
     return (
-        <div>
+        <div className='registroo'>
             <h2>Registro de Usuario</h2>
             <label htmlFor='nombre'>Nombre:</label>
             <input
